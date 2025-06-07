@@ -31,4 +31,56 @@ public class LoginTests extends CoreTestCase
         dashboardPage.waitForDashboardToLoad();
         dashboardPage.checkTransactionsTextPresent();
     }
+    
+    @Test
+    public void testBlankFieldsValidation()
+    {
+        LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
+        
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        loginPage.clickLoginButton();
+        loginPage.clickEmailField();
+        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        loginPage.clickPasswordField();
+        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        loginPage.verifyValidationErrorMustBePresent("The value should not be blank");
+        loginPage.clickEmailField();
+        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        loginPage.verifyValidationErrorMustBePresent("The value should not be blank");
+    }
+    
+    @Test
+    public void testInvalidEmailValidation()
+    {
+        LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
+        
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        loginPage.clickLoginButton();
+        String longEmail = "random";
+        loginPage.enterInvalidEmail(longEmail);
+        loginPage.verifyValidationErrorMustBePresent("Email address is not valid");
+    }
+
+    @Test
+    public void testInvalidCredentialsAlert()
+    {
+        LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
+
+        loginPage.clickLoginButton();
+        loginPage.enterEmail("random@mail.ru");
+        loginPage.enterPassword("random");
+        loginPage.clickContinueButton();
+        loginPage.verifyWrongCredentialsAlert();
+        loginPage.clickAlertOkButton();
+    }
 }
