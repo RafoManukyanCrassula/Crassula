@@ -1,0 +1,161 @@
+Cash management transfer: Перевод для управления ликвидностью
+Card bulk clearing: Массовое клирингование по картам
+Credit card payment: Платёж по кредитной карте
+Trade settlement payment: Платёж по торговым расчетам
+Debit card payment: Платёж по дебетовой карте
+Dividend: Дивиденды
+Deliver against payment: Поставка против оплаты
+Fee collection: Взимание комиссии
+Government payment: Платёж государству
+Person to person payment: Перевод от частного лица частному лицу
+Hedging: Хеджирование
+Intra company payment: Внутрикорпоративный платёж
+Interest: Проценты
+Loan: Кредит
+Consumer: Потребительский
+Pension payment: Выплата пенсии
+Salary payment: Выплата зарплаты
+Bonus payment: Выплата бонуса
+Reimbursement. Received credit transfer: Возмещение. Полученный кредитовый перевод
+Securities: Ценные бумаги
+Social security benefi: Выплата по социальному обеспечению
+Supplier payment: Платёж поставщику
+Tax payment: Уплата налога
+Value added tax: Налог на добавленную стоимость
+With holding: Удержание налога
+Trade: Торговля
+Treasury payment: Казначейский платёж
+Other payments: Прочие платежи
+Cash management transfer: Перевод для управления ликвидностью
+Cash disbursement cash management: Расходная операция по управлению ликвидностью
+Accounts receivables entry: Запись по дебиторской задолженности
+Invoice payment: Оплата счёта
+Liquidity management: Управление ликвидностью
+Netting: Взаимозачёт
+Account overdraft repayment: Погашение перерасхода по счёту
+Treasury payment: Казначейский платёж
+Card bulk clearing: Массовое клирингование по картам
+Credit card bill: Счёт по кредитной карте
+Bond forward netting: Зачёт облигационных форвардов
+Trade settlement payment: Платёж по торговым расчётам
+Exchange traded derivatives: Биржевые деривативы
+Futures netting payment: Платёж по зачету фьючерсов
+Forward foreign exchange: Валютный форвард
+Foreign exchange: Валютная операция
+Futures: Фьючерсы
+Foreign exchange related netting: Валютный взаимо-зачёт
+OTC derivatives: Внебиржевые деривативы
+Repurchase agreement: Сделка РЕПО
+Securities buy sell sell buy back: Сделки купли-продажи и обратного выкупа ценных бумаг
+Swap contract final payment: Финальный платёж по своп-контракту
+Swap contract partial payment: Частичный платёж по своп-контракту
+Swap contract reset payment: Платёж при переоценке своп-контракта
+Swap contract upfront payment: Авансовый платёж по своп-контракту
+Lending revenue payments: Доход от предоставленного займа
+Financial aid in case of natural disaster: Финансовая помощь при стихийном бедствии
+Payment based on enforcement order: Платёж по исполнительному листу
+Government payment: Платёж государству
+Alimony payment: Алиментный платёж
+Child benefit: Пособие на ребёнка
+Unemployment disability benefit: Пособие по безработице / инвалидности
+Account management: Управление счётом
+Intra party payment: Внутрипартийный перевод
+Hedging: Хеджирование
+Intra company payment: Внутрикорпоративный перевод
+Bank loan accrued interest payment: Выплата начисленных процентов по банковскому кредиту
+Interest: Проценты
+Bank loan principal pay-down: Погашение основного долга по кредиту
+Loan: Кредит
+Loan repayment: Погашение кредита
+Bank loan fees: Комиссии по банковскому кредиту
+Pension payment: Выплата пенсии
+Salary payment: Выплата заработной платы
+Bonus payment: Выплата бонуса
+Refund: Возврат средств
+Rebate: Скидка / Возмещение
+Investment & securities: Инвестиции и ценные бумаги
+Securities: Ценные бумаги
+Social security benefit: Социальная выплата
+Collection payment: Платёж по инкассо
+Supplier payment: Платёж поставщику
+Income tax: Подоходный налог
+Estate tax: Наследственный налог
+Housing tax: Налог на жильё
+Road tax: Дорожный налог
+Tax refund: Возврат налога
+Tax payment: Уплата налога
+Property tax: Налог на имущество
+Value added tax payment: Уплата НДС
+With holding: Удержание (налоговое)
+Commercial: Коммерческий
+Agricultural transfer: Аграрный перевод
+Charity payment: Благотворительный взнос
+Car loan principal repayment: Погашение основного долга по автокредиту
+Personal finance: dental services: Личные финансы: стоматологические услуги
+Personal finance: education: Личные финансы: образование
+Personal finance: gambling: Личные финансы: азартные игры
+Personal finance: lottery: Личные финансы: лотерея
+Personal finance: long term care facility: Личные финансы: учреждение длительного ухода
+Personal finance: medical services: Личные финансы: медицинские услуги
+Personal finance: savings: Личные финансы: сбережения
+Personal finance: subscription: Личные финансы: подписка
+Personal finance: trust fund: Личные финансы: трастовый фонд
+Personal finance: vision care: Личные финансы: офтальмологические услуги
+Corporate: commercial payment: Корпоративный: коммерческий платёж
+Corporate: business expenses: Корпоративный: деловые расходы
+Corporate: agricultural transfer: Корпоративный: аграрный перевод
+Corporate: advisory donation copyright services: Корпоративный: консультации, пожертвования, авторские права
+Corporate: commission: Корпоративный: комиссия
+Corporate: compensation payment: Корпоративный: компенсационный платёж
+Corporate: consumer third party consolidated payment: Корпоративный: консолидированный платёж за потребителя от третьей стороны
+Corporate: copyright: Корпоративный: авторские права
+Corporate: deposit: Корпоративный: депозит
+Corporate: e-payment return: Корпоративный: возврат электронного платежа
+Corporate: e-payment: Корпоративный: электронный платёж
+Corporate: purchase sale of goods and services: Корпоративный: покупка и продажа товаров и услуг
+Corporate: gift: Корпоративный: подарок
+Corporate: purchase sale of goods and services with cash back: Корпоративный: покупка/продажа товаров и услуг с возвратом наличных
+Corporate: housing related contribution: Корпоративный: жилищные взносы
+Corporate: instalment: Корпоративный: платёж в рассрочку
+Corporate: pension fund contribution: Корпоративный: взнос в пенсионный фонд
+Corporate: rebate: Корпоративный: возврат / компенсация
+Corporate: refund: Корпоративный: возврат средств
+Corporate: rental lease general: Корпоративный: аренда / лизинг
+Corporate: royalties: Корпоративный: роялти
+Corporate: commercial: Корпоративный: коммерческий
+Insurance: health insurance: Страхование: медицинская страховка
+Insurance: insurance premium car: Страхование: страховой взнос за автомобиль
+Insurance: insurance premium refund: Страхование: возврат страховой премии
+Insurance: payment of insurance claim: Страхование: выплата страхового возмещения
+Insurance: insurance premium: Страхование: страховой взнос
+Insurance: labour insurance: Страхование: трудовое страхование
+Insurance: life insurance: Страхование: страхование жизни
+Insurance: property insurance: Страхование: страхование имущества
+Property: loan repayment: Недвижимость: погашение кредита
+Property: loan settlement: Недвижимость: расчёт по кредиту
+Property: completion payment: Недвижимость: окончательный платёж
+Property: deposit: Недвижимость: депозит
+Property: loan disbursement: Недвижимость: выдача кредита
+Property: loan refinancing: Недвижимость: рефинансирование кредита
+Bills & fees: back office conversion entry: Счета и сборы: внутренняя бухгалтерская проводка
+Bills & fees: cable TV bill: Счета и сборы: счёт за кабельное ТВ
+Bills & fees: collection payment: Счета и сборы: платёж по инкассо
+Bills & fees: license fee: Счета и сборы: лицензионный сбор
+Bills & fees: service charges: Счета и сборы: плата за обслуживание
+Bills & fees: town council service charges: Счета и сборы: сборы городского совета
+Bills & fees: utilities: Счета и сборы: коммунальные услуги
+Bills & fees: water bill: Счета и сборы: счёт за воду
+Bills & fees: telephone bill: Счета и сборы: счёт за телефон
+Bills & fees: electricity bill: Счета и сборы: счёт за электричество
+Bills & fees: gas bill: Счета и сборы: счёт за газ
+Bills & fees: carpark charges: Счета и сборы: плата за парковку
+Bills & fees: payment of fees: Счета и сборы: оплата сборов
+Bills & fees: building maintenance: Счета и сборы: обслуживание здания
+Bills & fees: debit collection payment: Счета и сборы: платёж по дебиторской задолженности
+Bills & fees: rent: Счета и сборы: аренда
+Securities Lending And Borrowing: Заимствование и предоставление ценных бумаг
+Commodity Transfer: Перевод товарных активов
+Lending rebate payments: Выплаты по возмещению за предоставление займов
+Personal Finance: Charity Payment: Личные финансы: Пожертвование
+Personal Finance: Car Loan Principal Repayment: Личные финансы: Погашение основного долга по автокредиту
+Reimbursement Received Credit Transfer: Полученное возмещение (безналичный перевод)

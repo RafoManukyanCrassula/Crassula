@@ -1,0 +1,161 @@
+Cash management transfer: Likvidumo valdymo pervedimas
+Card bulk clearing: Masinis kortelių atsiskaitymas
+Credit card payment: Mokėjimas kreditine kortele
+Trade settlement payment: Mokėjimas už sandorį
+Debit card payment: Mokėjimas debetine kortele
+Dividend: Dividendas
+Deliver against payment: Pristatymas su mokėjimu
+Fee collection: Mokesčių surinkimas
+Government payment: Mokėjimas valdžiai
+Person to person payment: Asmeninis pervedimas
+Hedging: Rizikos valdymas (apsidraudimas)
+Intra company payment: Vidinis įmonės pervedimas
+Interest: Palūkanos
+Loan: Paskola
+Consumer: Vartotojas
+Pension payment: Pensijos mokėjimas
+Salary payment: Atlyginimo mokėjimas
+Bonus payment: Premijos mokėjimas
+Reimbursement. Received credit transfer: Kompensacija. Gautas kredito pervedimas
+Securities: Vertybiniai popieriai
+Social security benefi: Socialinės apsaugos išmoka
+Supplier payment: Mokėjimas tiekėjui
+Tax payment: Mokesčio mokėjimas
+Value added tax: Pridėtinės vertės mokestis
+With holding: Mokesčio išskaičiavimas
+Trade: Prekyba
+Treasury payment: Iždo mokėjimas
+Other payments: Kiti mokėjimai
+Cash management transfer: Pinigų valdymo pervedimas
+Cash disbursement cash management: Pinigų išmokėjimas pinigų valdymui
+Accounts receivables entry: Gautinų sumų įrašas
+Invoice payment: Sąskaitos apmokėjimas
+Liquidity management: Likvidumo valdymas
+Netting: Užskaitymas
+Account overdraft repayment: Sąskaitos pereikvojimo padengimas
+Treasury payment: Iždo mokėjimas
+Card bulk clearing: Masinis kortelių atsiskaitymas
+Credit card bill: Kreditinės kortelės sąskaita
+Bond forward netting: Obligacijų išankstinių sutarčių užskaitymas
+Trade settlement payment: Atsiskaitymo už prekybą mokėjimas
+Exchange traded derivatives: Biržoje prekiaujami išvestiniai finansiniai instrumentai
+Futures netting payment: Ateities sandorių užskaitymo mokėjimas
+Forward foreign exchange: Išankstinis valiutos keitimas
+Foreign exchange: Valiutos keitimas
+Futures: Ateities sandoriai
+Foreign exchange related netting: Su valiutų keitimu susijęs užskaitymas
+OTC derivatives: Ne biržos išvestiniai instrumentai
+Repurchase agreement: Atpirkimo sandoris (REPO)
+Securities buy sell sell buy back: Vertybinių popierių pirkimas, pardavimas ir atpirkimas
+Swap contract final payment: Galutinis mokėjimas pagal apsikeitimo sandorį
+Swap contract partial payment: Dalinis mokėjimas pagal apsikeitimo sandorį
+Swap contract reset payment: Atnaujinimo mokėjimas pagal apsikeitimo sandorį
+Swap contract upfront payment: Išankstinis mokėjimas pagal apsikeitimo sandorį
+Lending revenue payments: Pajamos iš paskolų
+Financial aid in case of natural disaster: Finansinė pagalba stichinės nelaimės atveju
+Payment based on enforcement order: Mokėjimas pagal vykdomąjį raštą
+Government payment: Mokėjimas valstybei
+Alimony payment: Alimentų mokėjimas
+Child benefit: Vaiko pašalpa
+Unemployment disability benefit: Bedarbio / neįgalumo pašalpa
+Account management: Sąskaitos administravimas
+Intra party payment: Vidaus mokėjimas tarp šalių
+Hedging: Rizikos apsidraudimas
+Intra company payment: Vidinis įmonės mokėjimas
+Bank loan accrued interest payment: Kaupiamųjų palūkanų mokėjimas už banko paskolą
+Interest: Palūkanos
+Bank loan principal pay-down: Pagrindinės banko paskolos dalies grąžinimas
+Loan: Paskola
+Loan repayment: Paskolos grąžinimas
+Bank loan fees: Banko paskolos mokesčiai
+Pension payment: Pensijos išmokėjimas
+Salary payment: Atlyginimo mokėjimas
+Bonus payment: Premijos mokėjimas
+Refund: Lėšų grąžinimas
+Rebate: Nuolaida / kompensacija
+Investment & securities: Investicijos ir vertybiniai popieriai
+Securities: Vertybiniai popieriai
+Social security benefit: Socialinio draudimo pašalpa
+Collection payment: Inkasavimo mokėjimas
+Supplier payment: Mokėjimas tiekėjui
+Income tax: Pajamų mokestis
+Estate tax: Paveldėjimo mokestis
+Housing tax: Būsto mokestis
+Road tax: Kelių mokestis
+Tax refund: Mokesčių grąžinimas
+Tax payment: Mokesčių mokėjimas
+Property tax: Turto mokestis
+Value added tax payment: PVM mokėjimas
+With holding: Mokesčio išskaičiavimas
+Commercial: Komercinis
+Agricultural transfer: Žemės ūkio pervedimas
+Charity payment: Labdaros mokėjimas
+Car loan principal repayment: Automobilio paskolos pagrindinės dalies grąžinimas
+Personal finance: dental services: Asmeniniai finansai: odontologijos paslaugos
+Personal finance: education: Asmeniniai finansai: švietimas
+Personal finance: gambling: Asmeniniai finansai: lošimai
+Personal finance: lottery: Asmeniniai finansai: loterija
+Personal finance: long term care facility: Asmeniniai finansai: ilgalaikės priežiūros įstaiga
+Personal finance: medical services: Asmeniniai finansai: medicinos paslaugos
+Personal finance: savings: Asmeniniai finansai: santaupos
+Personal finance: subscription: Asmeniniai finansai: prenumerata
+Personal finance: trust fund: Asmeniniai finansai: patikos fondas
+Personal finance: vision care: Asmeniniai finansai: regos priežiūra
+Corporate: commercial payment: Verslas: komercinis mokėjimas
+Corporate: business expenses: Verslas: verslo išlaidos
+Corporate: agricultural transfer: Verslas: žemės ūkio pervedimas
+Corporate: advisory donation copyright services: Verslas: konsultacijos, aukos, autorinės teisės
+Corporate: commission: Verslas: komisiniai
+Corporate: compensation payment: Verslas: kompensacijos mokėjimas
+Corporate: consumer third party consolidated payment: Verslas: suvienodintas vartotojo mokėjimas per trečiąją šalį
+Corporate: copyright: Verslas: autorinės teisės
+Corporate: deposit: Verslas: indėlis
+Corporate: e-payment return: Verslas: elektroninio mokėjimo grąžinimas
+Corporate: e-payment: Verslas: elektroninis mokėjimas
+Corporate: purchase sale of goods and services: Verslas: prekių ir paslaugų pirkimas / pardavimas
+Corporate: gift: Verslas: dovana
+Corporate: purchase sale of goods and services with cash back: Verslas: prekių / paslaugų pirkimas / pardavimas su grynųjų pinigų grąžinimu
+Corporate: housing related contribution: Verslas: įnašas būsto reikmėms
+Corporate: instalment: Verslas: įmoka
+Corporate: pension fund contribution: Verslas: įmoka į pensijų fondą
+Corporate: rebate: Verslas: kompensacija / nuolaida
+Corporate: refund: Verslas: grąžinimas
+Corporate: rental lease general: Verslas: nuoma / lizingas
+Corporate: royalties: Verslas: honorarai
+Corporate: commercial: Verslas: komercinis
+Insurance: health insurance: Draudimas: sveikatos draudimas
+Insurance: insurance premium car: Draudimas: draudimo įmoka už automobilį
+Insurance: insurance premium refund: Draudimas: draudimo įmokos grąžinimas
+Insurance: payment of insurance claim: Draudimas: išmokos mokėjimas
+Insurance: insurance premium: Draudimas: draudimo įmoka
+Insurance: labour insurance: Draudimas: darbo draudimas
+Insurance: life insurance: Draudimas: gyvybės draudimas
+Insurance: property insurance: Draudimas: turto draudimas
+Property: loan repayment: Nekilnojamasis turtas: paskolos grąžinimas
+Property: loan settlement: Nekilnojamasis turtas: paskolos užbaigimas
+Property: completion payment: Nekilnojamasis turtas: galutinis atsiskaitymas
+Property: deposit: Nekilnojamasis turtas: užstatas
+Property: loan disbursement: Nekilnojamasis turtas: paskolos išmokėjimas
+Property: loan refinancing: Nekilnojamasis turtas: paskolos refinansavimas
+Bills & fees: back office conversion entry: Sąskaitos ir mokesčiai: vidinio proceso apskaitos įrašas
+Bills & fees: cable TV bill: Sąskaitos ir mokesčiai: kabelinės televizijos sąskaita
+Bills & fees: collection payment: Sąskaitos ir mokesčiai: inkasavimo mokėjimas
+Bills & fees: license fee: Sąskaitos ir mokesčiai: licencijos mokestis
+Bills & fees: service charges: Sąskaitos ir mokesčiai: paslaugų mokesčiai
+Bills & fees: town council service charges: Sąskaitos ir mokesčiai: savivaldybės paslaugų mokesčiai
+Bills & fees: utilities: Sąskaitos ir mokesčiai: komunalinės paslaugos
+Bills & fees: water bill: Sąskaitos ir mokesčiai: sąskaita už vandenį
+Bills & fees: telephone bill: Sąskaitos ir mokesčiai: sąskaita už telefoną
+Bills & fees: electricity bill: Sąskaitos ir mokesčiai: sąskaita už elektrą
+Bills & fees: gas bill: Sąskaitos ir mokesčiai: sąskaita už dujas
+Bills & fees: carpark charges: Sąskaitos ir mokesčiai: parkavimo mokesčiai
+Bills & fees: payment of fees: Sąskaitos ir mokesčiai: mokesčių apmokėjimas
+Bills & fees: building maintenance: Sąskaitos ir mokesčiai: pastato priežiūra
+Bills & fees: debit collection payment: Sąskaitos ir mokesčiai: debeto surinkimo mokėjimas
+Bills & fees: rent: Sąskaitos ir mokesčiai: nuoma
+Securities Lending And Borrowing: Vertybinių popierių skolinimas ir skolinimasis
+Commodity Transfer: Prekių perdavimas
+Lending rebate payments: Paskolos grąžinimo kompensacijos
+Personal Finance: Charity Payment: Asmeniniai finansai: Auka
+Personal Finance: Car Loan Principal Repayment: Asmeniniai finansai: Pagrindinės automobilių paskolos grąžinimas
+Reimbursement Received Credit Transfer: Gautas kompensacijos pervedimas

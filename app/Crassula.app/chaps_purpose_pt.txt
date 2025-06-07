@@ -1,0 +1,161 @@
+Cash management transfer: Transferência para gestão de caixa
+Card bulk clearing: Compensação em lote de cartões
+Credit card payment: Pagamento com cartão de crédito
+Trade settlement payment: Pagamento de liquidação comercial
+Debit card payment: Pagamento com cartão de débito
+Dividend: Dividendo
+Deliver against payment: Entrega mediante pagamento
+Fee collection: Cobrança de taxas
+Government payment: Pagamento ao governo
+Person to person payment: Pagamento entre pessoas
+Hedging: Cobertura (hedge)
+Intra company payment: Pagamento intraempresa
+Interest: Juros
+Loan: Empréstimo
+Consumer: Consumidor
+Pension payment: Pagamento de pensão
+Salary payment: Pagamento de salário
+Bonus payment: Pagamento de bônus
+Reimbursement. Received credit transfer: Reembolso. Transferência de crédito recebida
+Securities: Títulos
+Social security benefi: Benefício da seguridade social
+Supplier payment: Pagamento ao fornecedor
+Tax payment: Pagamento de impostos
+Value added tax: Imposto sobre valor agregado
+With holding: Retenção na fonte
+Trade: Comércio
+Treasury payment: Pagamento do tesouro
+Other payments: Outros pagamentos
+Cash management transfer: Transferência de gestão de caixa
+Cash disbursement cash management: Desembolso de caixa (gestão de caixa)
+Accounts receivables entry: Entrada de contas a receber
+Invoice payment: Pagamento de fatura
+Liquidity management: Gestão de liquidez
+Netting: Liquidação compensatória
+Account overdraft repayment: Reembolso de saldo devedor da conta
+Treasury payment: Pagamento de tesouraria
+Card bulk clearing: Liquidação em massa de cartões
+Credit card bill: Fatura de cartão de crédito
+Bond forward netting: Liquidação compensatória de título a prazo
+Trade settlement payment: Pagamento de liquidação comercial
+Exchange traded derivatives: Derivativos negociados em bolsa
+Futures netting payment: Pagamento de liquidação compensatória de futuros
+Forward foreign exchange: Contrato a prazo de câmbio
+Foreign exchange: Câmbio de moeda
+Futures: Futuros
+Foreign exchange related netting: Liquidação compensatória relacionada ao câmbio de moeda
+OTC derivatives: Derivativos OTC (mercado de balcão)
+Repurchase agreement: Acordo de recompra
+Securities buy sell sell buy back: Compra/venda e recompra de títulos
+Swap contract final payment: Pagamento final de contrato swap
+Swap contract partial payment: Pagamento parcial de contrato swap
+Swap contract reset payment: Pagamento de ajuste de contrato swap
+Swap contract upfront payment: Pagamento antecipado de contrato swap
+Lending revenue payments: Pagamentos por receitas de empréstimos
+Financial aid in case of natural disaster: Ajuda financeira em caso de desastre natural
+Payment based on enforcement order: Pagamento baseado em ordem de execução
+Government payment: Pagamento governamental
+Alimony payment: Pagamento de pensão alimentícia
+Child benefit: Benefício por filho
+Unemployment disability benefit: Benefício de incapacidade por desemprego
+Account management: Gestão de contas
+Intra party payment: Pagamento entre partes
+Hedging: Cobertura
+Intra company payment: Pagamento intraempresa
+Bank loan accrued interest payment: Pagamento de juros acumulados de empréstimo bancário
+Interest: Juros
+Bank loan principal pay-down: Redução do principal do empréstimo bancário
+Loan: Empréstimo
+Loan repayment: Reembolso do empréstimo
+Bank loan fees: Taxas de empréstimo bancário
+Pension payment: Pagamento de pensão
+Salary payment: Pagamento de salário
+Bonus payment: Pagamento de bônus
+Refund: Reembolso
+Rebate: Desconto
+Investment & securities: Investimentos e títulos
+Securities: Títulos
+Social security benefit: Benefício de seguridade social
+Collection payment: Pagamento de cobrança
+Supplier payment: Pagamento a fornecedor
+Income tax: Imposto de renda
+Estate tax: Imposto sobre heranças
+Housing tax: Imposto sobre propriedades
+Road tax: Imposto sobre veículos
+Tax refund: Reembolso de impostos
+Tax payment: Pagamento de impostos
+Property tax: Imposto sobre a propriedade
+Value added tax payment: Pagamento de IVA
+With holding: Retenção de impostos
+Commercial: Comercial
+Agricultural transfer: Transferência agrícola
+Charity payment: Doação para caridade
+Car loan principal repayment: Reembolso do principal do empréstimo de carro
+Personal finance: dental services: Finanças pessoais: serviços dentários
+Personal finance: education: Finanças pessoais: educação
+Personal finance: gambling: Finanças pessoais: jogos de azar
+Personal finance: lottery: Finanças pessoais: loteria
+Personal finance: long term care facility: Finanças pessoais: instituição de cuidados a longo prazo
+Personal finance: medical services: Finanças pessoais: serviços médicos
+Personal finance: savings: Finanças pessoais: poupança
+Personal finance: subscription: Finanças pessoais: subscrição
+Personal finance: trust fund: Finanças pessoais: fundo fiduciário
+Personal finance: vision care: Finanças pessoais: cuidados com a visão
+Corporate: commercial payment: Corporativo: pagamento comercial
+Corporate: business expenses: Corporativo: despesas empresariais
+Corporate: agricultural transfer: Corporativo: transferência agrícola
+Corporate: advisory donation copyright services: Corporativo: serviços de consultoria, doações e direitos autorais
+Corporate: commission: Corporativo: comissão
+Corporate: compensation payment: Corporativo: pagamento de compensação
+Corporate: consumer third party consolidated payment: Corporativo: pagamento consolidado a terceiro para consumidores
+Corporate: copyright: Corporativo: direitos autorais
+Corporate: deposit: Corporativo: depósito
+Corporate: e-payment return: Corporativo: devolução de pagamento eletrônico
+Corporate: e-payment: Corporativo: pagamento eletrônico
+Corporate: purchase sale of goods and services: Corporativo: compra e venda de bens e serviços
+Corporate: gift: Corporativo: presente
+Corporate: purchase sale of goods and services with cash back: Corporativo: compra e venda de bens e serviços com devolução de dinheiro
+Corporate: housing related contribution: Corporativo: contribuição relacionada à habitação
+Corporate: instalment: Corporativo: parcela
+Corporate: pension fund contribution: Corporativo: contribuição para fundo de pensão
+Corporate: rebate: Corporativo: reembolso
+Corporate: refund: Corporativo: reembolso
+Corporate: rental lease general: Corporativo: aluguel geral
+Corporate: royalties: Corporativo: royalties
+Corporate: commercial: Corporativo: comercial
+Insurance: health insurance: Seguro: seguro de saúde
+Insurance: insurance premium car: Seguro: prêmio do seguro de carro
+Insurance: insurance premium refund: Seguro: reembolso do prêmio de seguro
+Insurance: payment of insurance claim: Seguro: pagamento de sinistro
+Insurance: insurance premium: Seguro: prêmio de seguro
+Insurance: labour insurance: Seguro: seguro trabalhista
+Insurance: life insurance: Seguro: seguro de vida
+Insurance: property insurance: Seguro: seguro de propriedade
+Property: loan repayment: Imóvel: reembolso do empréstimo
+Property: loan settlement: Imóvel: liquidação do empréstimo
+Property: completion payment: Imóvel: pagamento de conclusão
+Property: deposit: Imóvel: depósito
+Property: loan disbursement: Imóvel: desembolso de empréstimo
+Property: loan refinancing: Imóvel: refinanciamento de empréstimo
+Bills & fees: back office conversion entry: Contas e taxas: entrada de conversão de back office
+Bills & fees: cable TV bill: Contas e taxas: fatura de TV a cabo
+Bills & fees: collection payment: Contas e taxas: pagamento de cobrança
+Bills & fees: license fee: Contas e taxas: taxa de licença
+Bills & fees: service charges: Contas e taxas: taxas de serviço
+Bills & fees: town council service charges: Contas e taxas: taxas de serviço do conselho municipal
+Bills & fees: utilities: Contas e taxas: utilidades
+Bills & fees: water bill: Contas e taxas: conta de água
+Bills & fees: telephone bill: Contas e taxas: conta de telefone
+Bills & fees: electricity bill: Contas e taxas: conta de eletricidade
+Bills & fees: gas bill: Contas e taxas: conta de gás
+Bills & fees: carpark charges: Contas e taxas: taxas de estacionamento
+Bills & fees: payment of fees: Contas e taxas: pagamento de taxas
+Bills & fees: building maintenance: Contas e taxas: manutenção de edifício
+Bills & fees: debit collection payment: Contas e taxas: pagamento de cobrança de débito
+Bills & fees: rent: Contas e taxas: aluguel
+Securities Lending And Borrowing: Empréstimo e empréstimo de valores mobiliários
+Commodity Transfer: Transferência de commodities
+Lending rebate payments: Pagamentos de reembolso de empréstimos
+Personal Finance: Charity Payment: Finanças pessoais: Pagamento de caridade
+Personal Finance: Car Loan Principal Repayment: Finanças pessoais: Transferencia de reembolso recibida
+Reimbursement Received Credit Transfer: Transferência de reembolso recebida
