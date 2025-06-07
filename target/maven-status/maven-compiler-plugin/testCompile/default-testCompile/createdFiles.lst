@@ -1,0 +1,14 @@
+suites/TestSuite.class
+lib/ui/factories/LoginPageObjectFactory.class
+lib/ui/SearchPageObject.class
+lib/ui/factories/DashboardPageObjectFactory.class
+lib/ui/Android/AndroidDashboardPageObject.class
+lib/ui/DashboardPageObject.class
+lib/ui/LoginPageObject.class
+lib/CoreTestCase.class
+lib/Platform.class
+tests/LoginTests.class
+lib/ui/iOS/iOSDashboardPageObject.class
+lib/ui/iOS/iOSLoginPageObject.class
+lib/ui/MainPageObject.class
+lib/ui/Android/AndroidLoginPageObject.class
