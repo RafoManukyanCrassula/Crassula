@@ -58,6 +58,8 @@ public class Platform {
         capabilities.setCapability("appPackage","com.crassula.demo");
         capabilities.setCapability("appActivity","com.cratech.crassula.ui.v2.main.MainActivity");
         capabilities.setCapability("app","/Users/rafomanukyan/Desktop/crassula.apk");
+        capabilities.setCapability("hideKeyboard", true);
+        capabilities.setCapability("autoHideKeyboard", true);
 
         return capabilities;
     }
@@ -71,7 +73,7 @@ public class Platform {
         capabilities.setCapability("automationName","XCUITest");
         capabilities.setCapability("app", "/Users/rafomanukyan/Desktop/Crassula.app");
         capabilities.setCapability("autoAcceptAlerts", true);
-        capabilities.setCapability("autoDismissAlerts", false);
+        capabilities.setCapability("autoAcceptAlertsDelay", 5000);
 
         return capabilities;
     }

@@ -18,6 +18,10 @@ public class iOSLoginPageObject extends LoginPageObject
         PASSWORD_TOGGLE_BUTTON = "id:ic visibility off";
         PASSCODE_TITLE = "id:Create a passcode for your account";
         PASSCODE_BUTTON_1 = "xpath://XCUIElementTypeButton[@name='1']";
+        VALIDATION_ERROR = "xpath://XCUIElementTypeStaticText[contains(@name,'not be blank') or contains(@name,'not valid')]";
+        ALERT_TITLE = "xpath://XCUIElementTypeStaticText[@name='Wrong credentials']";
+        ALERT_MESSAGE = "id:The email or password you entered is incorrect";
+        ALERT_OK_BUTTON = "id:OK";
     }
 
     public iOSLoginPageObject(AppiumDriver driver)
