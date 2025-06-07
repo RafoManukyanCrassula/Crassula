@@ -3,3 +3,26 @@
 /workspace.xml
 # Environment-dependent path to Maven home directory
 /mavenHomeManager.xml
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE
+.idea/
+*.iml
+
+# Build
+target/
+build/
+out/
+
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
