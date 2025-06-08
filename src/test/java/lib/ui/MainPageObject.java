@@ -195,14 +195,4 @@ public abstract class MainPageObject {
         }
         return bytes;
     }
-
-    public void hideKeyboard() {
-    try {
-        if (driver instanceof AndroidDriver) {
-            ((AndroidDriver) driver).hideKeyboard();
-        }
-    } catch (Exception e) {
-        System.out.println("Could not hide keyboard: " + e.getMessage());
-    }
-  }
 }
