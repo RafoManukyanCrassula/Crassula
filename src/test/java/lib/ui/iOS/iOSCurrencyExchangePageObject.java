@@ -5,7 +5,6 @@ import lib.ui.CurrencyExchangePageObject;
 
 public class iOSCurrencyExchangePageObject extends CurrencyExchangePageObject {
     static {
-        // iOS локаторы (пока используем те же самые, но при необходимости можно изменить)
         EXCHANGE_BUTTON = "com.crassula.demo:id/buttonExchange";
         EXCHANGE_PAGE_TITLE = "//XCUIElementTypeStaticText[@name='Exchange']";
         EXCHANGE_RATE_INFO = "com.crassula.demo:id/labelInfoExchange";
