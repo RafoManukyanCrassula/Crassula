@@ -401,8 +401,6 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
         this.waitForElementPresent(TRANSACTION_ICON, "Transaction icon not found", 10);
         this.waitForElementPresent(TRANSACTION_PAYMENT, "Transaction payment info not found", 10);
         this.waitForElementPresent(TRANSACTION_DATE, "Transaction date not found", 10);
-
-        // Check key-value pairs
         this.waitForElementPresent(TRANSACTION_TYPE_TITLE, "Type title not found", 10);
         this.waitForElementPresent(TRANSACTION_TYPE_VALUE, "Exchange value not found", 10);
         this.waitForElementPresent(TRANSACTION_STATUS_TITLE, "Status title not found", 10);
