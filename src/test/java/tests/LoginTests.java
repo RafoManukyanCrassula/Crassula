@@ -16,7 +16,8 @@ public class LoginTests extends CoreTestCase
         
         try {
             Thread.sleep(3000);
-        } catch (InterruptedException e) {
+        } catch (InterruptedException
+                e) {
             e.printStackTrace();
         }
         
