@@ -1,4 +1,43 @@
 -------------------------------------------------------------------------------
 Test set: tests.CurrencyExchangeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 58.99 s -- in tests.CurrencyExchangeTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 65.89 s <<< FAILURE! -- in tests.CurrencyExchangeTest
+tests.CurrencyExchangeTest.testCurrencyExchange -- Time elapsed: 65.87 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Транзакция не найдена на дашборде
+ (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:50)
+	at lib.ui.DashboardPageObject.verifyTransactionOnDashboard(DashboardPageObject.java:31)
+	at tests.CurrencyExchangeTest.testCurrencyExchange(CurrencyExchangeTest.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.2', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [997ffd75-a21f-4648-8e8f-89f85c71d6c1, findElement {using=xpath, value=//android.widget.TextView[@resource-id='com.crassula.demo:id/labelAmount' and @text='- £1.00']}]
+Capabilities {appium:app: /Users/rafomanukyan/Desktop..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafomanukyan/Desktop..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, hideKeyboard: true, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:hideKeyboard: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 997ffd75-a21f-4648-8e8f-89f85c71d6c1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 7 more
+

@@ -1,6 +1,7 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import lib.ui.MainPageObject;
 import org.openqa.selenium.WebElement;
 
 abstract public class CurrencyExchangePageObject extends MainPageObject
@@ -152,6 +153,47 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
     public void verifyMaxButtonExists()
     {
         this.waitForElementPresent(MAX_BUTTON, "MAX button not found", 10);
+    }
+
+    public void clickMaxButtonAndClearAmount()
+    {
+        this.waitForElementAndClick(MAX_BUTTON, "Cannot click MAX button", 5);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        WebElement balanceElement = this.waitForElementPresent(
+                BALANCE_TEMPLATE,
+                "Account balance not found",
+                10
+        );
+        String balanceText = balanceElement.getText();
+        String balanceAmount = balanceText.substring(balanceText.indexOf(": ") + 2, balanceText.lastIndexOf(" "));
+        balanceAmount = balanceAmount.replace(",", "");
+
+        WebElement firstField = this.waitForElementPresent(
+                FIRST_EDIT_AMOUNT,
+                "First amount field not found",
+                10
+        );
+        String inputAmount = firstField.getText();
+
+        assert inputAmount != null && !inputAmount.isEmpty() : "Input field is empty after clicking MAX";
+        assert inputAmount.equals(balanceAmount) :
+                "Amount in input field (" + inputAmount + ") does not match account balance (" + balanceAmount + ")";
+
+        firstField.click();
+        int length = firstField.getText().length();
+        for (int i = 0; i < length; i++) {
+            firstField.sendKeys("\b");
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void verifySecondAmountFieldExists()
