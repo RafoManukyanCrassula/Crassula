@@ -1,7 +1,6 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
-import lib.ui.MainPageObject;
 import org.openqa.selenium.WebElement;
 
 abstract public class CurrencyExchangePageObject extends MainPageObject

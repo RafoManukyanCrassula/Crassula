@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CurrencyExchangeTest" time="65.888" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CurrencyExchangeTest" time="60.494" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AM"/>
     <property name="sun.boot.library.path" value="/Users/rafomanukyan/Library/Java/JavaVirtualMachines/openjdk-24.0.1/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250610005247005_3.jar /Users/rafomanukyan/Desktop/Crassula/target/surefire 2025-06-10T00-52-46_940-jvmRun1 surefire-20250610005247005_1tmp surefire_0-20250610005247005_2tmp"/>
+    <property name="sun.java.command" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250610011414216_3.jar /Users/rafomanukyan/Desktop/Crassula/target/surefire 2025-06-10T01-14-14_117-jvmRun1 surefire-20250610011414216_1tmp surefire_0-20250610011414216_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="CurrencyExchangeTest"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250610005247005_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250610011414216_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -59,44 +59,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testCurrencyExchange" classname="tests.CurrencyExchangeTest" time="65.872">
-    <error message="Expected condition failed: Транзакция не найдена на дашборде&#10; (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
-Expected condition failed: Транзакция не найдена на дашборде
- (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
-	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:50)
-	at lib.ui.DashboardPageObject.verifyTransactionOnDashboard(DashboardPageObject.java:31)
-	at tests.CurrencyExchangeTest.testCurrencyExchange(CurrencyExchangeTest.java:130)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.2', java.version: '24.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [997ffd75-a21f-4648-8e8f-89f85c71d6c1, findElement {using=xpath, value=//android.widget.TextView[@resource-id='com.crassula.demo:id/labelAmount' and @text='- £1.00']}]
-Capabilities {appium:app: /Users/rafomanukyan/Desktop..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafomanukyan/Desktop..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, hideKeyboard: true, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:hideKeyboard: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 997ffd75-a21f-4648-8e8f-89f85c71d6c1
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 7 more
-]]></error>
-  </testcase>
+  <testcase name="testCurrencyExchange" classname="tests.CurrencyExchangeTest" time="60.479"/>
 </testsuite>
