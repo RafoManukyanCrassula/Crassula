@@ -37,7 +37,7 @@
             <version>1.10.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- Временно отключаем Allure из-за несовместимости с Java 24
+        <!--
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
@@ -74,7 +74,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <!-- Убираем AspectJ настройки пока 
+                    <!--
                     <argLine>
                         -add-opens java.base/java.lang=ALL-UNNAMED
                         -add-opens java.base/java.util=ALL-UNNAMED
