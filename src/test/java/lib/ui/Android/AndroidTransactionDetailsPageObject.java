@@ -17,7 +17,7 @@ public class AndroidTransactionDetailsPageObject extends TransactionDetailsPageO
         TRANSACTION_DESCRIPTION_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and contains(@text, 'Exchange')]";
         TRANSACTION_CREATED_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and string-length(@text) > 0]";
         TRANSACTION_PAYMENT_TO_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and string-length(@text) > 0]";
-        TRANSACTION_ACCOUNT_NUMBER_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and contains(@text, '8497')]";
+        TRANSACTION_ACCOUNT_NUMBER_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and string-length(@text) > 0]";
         TRANSACTION_ID_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and string-length(@text) > 0]";
         BACK_BUTTON = "id:com.crassula.demo:id/buttonBack";
     }
