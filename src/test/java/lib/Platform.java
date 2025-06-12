@@ -57,7 +57,7 @@ public class Platform {
         capabilities.setCapability("automationName","UiAutomator2");
         capabilities.setCapability("appPackage","com.crassula.demo");
         capabilities.setCapability("appActivity","com.cratech.crassula.ui.v2.main.MainActivity");
-        capabilities.setCapability("app","/Users/rafomanukyan/Desktop/Crassula/app/crassula.apk");
+        capabilities.setCapability("app","/Users/rafomanukyan/Desktop/crassula.apk ");
         capabilities.setCapability("hideKeyboard", true);
         capabilities.setCapability("autoHideKeyboard", true);
 
@@ -71,7 +71,7 @@ public class Platform {
         capabilities.setCapability("deviceName","iPhone 16 Plus");
         capabilities.setCapability("platformVersion","18.4");
         capabilities.setCapability("automationName","XCUITest");
-        capabilities.setCapability("app", "/Users/rafomanukyan/Desktop/Crassula/app/Crassula.app");
+        capabilities.setCapability("app", "/Users/rafomanukyan/Desktop/Crassula.app");
         capabilities.setCapability("autoAcceptAlerts", true);
         capabilities.setCapability("autoAcceptAlertsDelay", 5000);
 
