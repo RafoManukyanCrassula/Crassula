@@ -8,7 +8,7 @@ public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObjec
     static {
         EXCHANGE_BUTTON = "id:com.crassula.demo:id/buttonExchange";
         EXCHANGE_PAGE_TITLE = "xpath://android.widget.TextView[@text='Exchange']";
-        EXCHANGE_RATE_INFO = "id:com.crassula.demo:id/labelInfoExchange";
+        EXCHANGE_RATE_INFO = "xpath://android.widget.TextView[contains(@text, '£') and contains(@text, '€')]";
         FIRST_AMOUNT_FIELD = "xpath:(//android.view.ViewGroup[@resource-id='com.crassula.demo:id/viewAmount'])[1]";
         FIRST_CURRENCY_ICON = "xpath:(//android.widget.ImageView[@resource-id='com.crassula.demo:id/imageCurrency'])[1]";
         FIRST_CURRENCY_BUTTON_TEMPLATE = "xpath://android.widget.Button[@resource-id='com.crassula.demo:id/buttonCurrency' and @text='{CURRENCY}']";
@@ -52,27 +52,11 @@ public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObjec
         SUCCESS_MESSAGE = "id:com.crassula.demo:id/labelText";
         EXCHANGE_AMOUNT = "id:com.crassula.demo:id/labelAmount";
         TRANSACTION_DETAILS_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Transaction details']";
-        TRANSACTION_AMOUNT = "id:com.crassula.demo:id/labelAmount";
-        TRANSACTION_ICON = "id:com.crassula.demo:id/imageIcon";
-        TRANSACTION_PAYMENT = "id:com.crassula.demo:id/labelPayment";
-        TRANSACTION_DATE = "id:com.crassula.demo:id/labelDetails";
-        TRANSACTION_TYPE_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Type']";
-        TRANSACTION_TYPE_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and @text='Exchange']";
-        TRANSACTION_STATUS_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Status']";
-        TRANSACTION_STATUS_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and @text='Pending']";
-        TRANSACTION_DESCRIPTION_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Description']";
-        TRANSACTION_DESCRIPTION_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and contains(@text, 'Exchange')]";
-        TRANSACTION_CREATED_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Created']";
-        TRANSACTION_CREATED_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and contains(@text, '2025')]";
-        TRANSACTION_PAYMENT_TO_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Payment to']";
-        TRANSACTION_PAYMENT_TO_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and @text='Name Surname']";
-        TRANSACTION_ACCOUNT_NUMBER_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Account number']";
-        TRANSACTION_ACCOUNT_NUMBER_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue' and @text='8497  9796  400']";
-        TRANSACTION_ID_TITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelTitle' and @text='Transaction ID']";
-        TRANSACTION_ID_VALUE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue']";
-        BACK_BUTTON = "id:com.crassula.demo:id/buttonBack";
         BACK_TO_HOME_BUTTON = "id:com.crassula.demo:id/buttonContinue";
         DASHBOARD_TRANSACTION = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelAmount' and @text='- £1.00']";
+        FEE_DETAILS_YOU_EXCHANGE_VALUE = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[1]";
+        FEE_DETAILS_EXCHANGE_FEE_VALUE = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[2]";
+        FEE_DETAILS_TOTAL_AMOUNT_VALUE = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]";
     }
 
     public AndroidCurrencyExchangePageObject(AppiumDriver driver)

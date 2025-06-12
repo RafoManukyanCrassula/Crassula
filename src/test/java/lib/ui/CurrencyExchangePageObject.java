@@ -52,27 +52,11 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
             SUCCESS_MESSAGE,
             EXCHANGE_AMOUNT,
             TRANSACTION_DETAILS_TITLE,
-            TRANSACTION_AMOUNT,
-            TRANSACTION_ICON,
-            TRANSACTION_PAYMENT,
-            TRANSACTION_DATE,
-            TRANSACTION_TYPE_TITLE,
-            TRANSACTION_TYPE_VALUE,
-            TRANSACTION_STATUS_TITLE,
-            TRANSACTION_STATUS_VALUE,
-            TRANSACTION_DESCRIPTION_TITLE,
-            TRANSACTION_DESCRIPTION_VALUE,
-            TRANSACTION_CREATED_TITLE,
-            TRANSACTION_CREATED_VALUE,
-            TRANSACTION_PAYMENT_TO_TITLE,
-            TRANSACTION_PAYMENT_TO_VALUE,
-            TRANSACTION_ACCOUNT_NUMBER_TITLE,
-            TRANSACTION_ACCOUNT_NUMBER_VALUE,
-            TRANSACTION_ID_TITLE,
-            TRANSACTION_ID_VALUE,
-            BACK_BUTTON,
             BACK_TO_HOME_BUTTON,
-            DASHBOARD_TRANSACTION;
+            DASHBOARD_TRANSACTION,
+            FEE_DETAILS_YOU_EXCHANGE_VALUE,
+            FEE_DETAILS_EXCHANGE_FEE_VALUE,
+            FEE_DETAILS_TOTAL_AMOUNT_VALUE;
 
     public CurrencyExchangePageObject(AppiumDriver driver)
     {
@@ -97,6 +81,12 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
     public void verifyExchangeRateInfoExists()
     {
         this.waitForElementPresent(EXCHANGE_RATE_INFO, "Exchange rate info not found", 10);
+    }
+
+    public String getExchangeRate()
+    {
+    WebElement rateElement = this.waitForElementPresent(EXCHANGE_RATE_INFO, "Exchange rate not found", 10);
+    return rateElement.getAttribute("text");
     }
 
     public void verifyFirstAmountFieldExists()
@@ -265,6 +255,22 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
         this.waitForElementPresent(ACCOUNT_NAME, "Account name not found", 10);
     }
 
+    public String getSelectedAccountNumber()
+    {
+        WebElement accountElement = this.waitForElementPresent(ACCOUNT_NAME, "Account name not found", 10);
+        String accountText = accountElement.getAttribute("text");
+        String[] parts = accountText.split(" ");
+        return parts[0];
+    }
+
+    public String getAccountNumberFromModal()
+    {
+         WebElement accountElement = this.waitForElementPresent("xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListTitle']", "Account name in modal not found", 10
+    );
+        String accountText = accountElement.getAttribute("text");
+        return accountText.split(" ")[0];
+    }
+
     public void verifyAccountAmount()
     {
         this.waitForElementPresent(ACCOUNT_AMOUNT, "Account amount not found", 10);
@@ -333,11 +339,43 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
         this.waitForElementAndClick(FEE_INFO, "Cannot click on fee information", 5);
     }
 
-    public void verifyFeeDetailsModal()
+    public void verifyFeeDetailsModal(String enteredAmount)
     {
         this.waitForElementPresent(FEE_DETAILS_YOU_EXCHANGE, "You exchange details not found", 10);
         this.waitForElementPresent(FEE_DETAILS_EXCHANGE_FEE, "Exchange fee details not found", 10);
         this.waitForElementPresent(FEE_DETAILS_TOTAL_AMOUNT, "Total amount details not found", 10);
+        
+        WebElement youExchangeElement = this.waitForElementPresent(
+            "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[1]", 
+            "You exchange amount not found", 10);
+        String youExchangeText = youExchangeElement.getAttribute("text");
+        
+        WebElement exchangeFeeElement = this.waitForElementPresent(
+            "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[2]", 
+            "Exchange fee amount not found", 10);
+        String exchangeFeeText = exchangeFeeElement.getAttribute("text");
+        
+        WebElement totalAmountElement = this.waitForElementPresent(
+            "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]", 
+            "Total amount not found", 10);
+        String totalAmountText = totalAmountElement.getAttribute("text");
+        
+        String expectedYouExchange = "- £" + enteredAmount + ".00";
+        assert youExchangeText.equals(expectedYouExchange) : 
+            String.format("You exchange amount is incorrect. Expected: %s, but got: %s", expectedYouExchange, youExchangeText);
+        
+        double youExchangeValue = extractAmountFromText(youExchangeText);
+        double exchangeFeeValue = extractAmountFromText(exchangeFeeText);
+        double totalAmountValue = extractAmountFromText(totalAmountText);
+        double expectedTotal = youExchangeValue + exchangeFeeValue;
+        
+        assert Math.abs(totalAmountValue - expectedTotal) < 0.01 :
+            String.format("Total amount calculation is incorrect. Expected: %.2f, but got: %.2f", expectedTotal, totalAmountValue);
+        
+        System.out.println("Fee details verified successfully:");
+        System.out.println("You exchange: " + youExchangeText);
+        System.out.println("Exchange fee: " + exchangeFeeText);
+        System.out.println("Total amount: " + totalAmountText);
     }
 
     public void closeFeeDetailsModal()
@@ -355,15 +393,104 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
         this.waitForElementPresent(CONFIRM_EXCHANGE_TITLE, "Confirm exchange title not found", 10);
     }
 
-    public void verifyConfirmationDetails()
-    {
-        this.waitForElementPresent(CONFIRM_FROM_ACCOUNT, "From Account field not found", 10);
-        this.waitForElementPresent(CONFIRM_YOU_EXCHANGE, "You exchange field not found", 10);
-        this.waitForElementPresent(CONFIRM_YOU_GET, "You get field not found", 10);
-        this.waitForElementPresent(CONFIRM_RATE, "Rate field not found", 10);
-        this.waitForElementPresent(CONFIRM_EXCHANGE_FEE, "Exchange fee field not found", 10);
-        this.waitForElementPresent(CONFIRM_TOTAL_AMOUNT, "Total amount field not found", 10);
+public void verifyConfirmationDetails(String enteredAmount, String accountNumber, String exchangeRate)
+{
+    this.waitForElementPresent(CONFIRM_FROM_ACCOUNT, "From Account field not found", 10);
+    this.waitForElementPresent(CONFIRM_YOU_EXCHANGE, "You exchange field not found", 10);
+    this.waitForElementPresent(CONFIRM_YOU_GET, "You get field not found", 10);
+    this.waitForElementPresent(CONFIRM_RATE, "Rate field not found", 10);
+    this.waitForElementPresent(CONFIRM_EXCHANGE_FEE, "Exchange fee field not found", 10);
+    this.waitForElementPresent(CONFIRM_TOTAL_AMOUNT, "Total amount field not found", 10);
+    
+    WebElement fromAccountElement = this.waitForElementPresent(
+        "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[1]", 
+        "From Account value not found", 10);
+    String fromAccountText = fromAccountElement.getAttribute("text");
+    
+    WebElement youExchangeElement = this.waitForElementPresent(
+        "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[2]", 
+        "You exchange value not found", 10);
+    String youExchangeText = youExchangeElement.getAttribute("text");
+    
+    WebElement youGetElement = this.waitForElementPresent(
+        "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]", 
+        "You get value not found", 10);
+    String youGetText = youGetElement.getAttribute("text");
+    
+    WebElement rateElement = this.waitForElementPresent(
+        "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[4]", 
+        "Rate value not found", 10);
+    String rateText = rateElement.getAttribute("text");
+    
+    WebElement exchangeFeeElement = this.waitForElementPresent(
+        "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[5]", 
+        "Exchange fee value not found", 10);
+    String exchangeFeeText = exchangeFeeElement.getAttribute("text");
+    
+    WebElement totalAmountElement = this.waitForElementPresent(
+        "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[6]", 
+        "Total amount value not found", 10);
+    String totalAmountText = totalAmountElement.getAttribute("text");
+    
+    System.out.println("=== DEBUG: Confirmation details ===");
+    System.out.println("From Account: " + fromAccountText);
+    System.out.println("You exchange: " + youExchangeText);
+    System.out.println("You get: " + youGetText);
+    System.out.println("Rate: " + rateText);
+    System.out.println("Exchange fee: " + exchangeFeeText);
+    System.out.println("Total amount: " + totalAmountText);
+    System.out.println("Expected account: " + accountNumber);
+    System.out.println("Expected rate: " + exchangeRate);
+    System.out.println("=== END DEBUG ===");
+    
+
+    boolean accountMatches = fromAccountText.contains(accountNumber) ||
+                           fromAccountText.equals(accountNumber + " (GBP)") ||
+                           fromAccountText.equals(accountNumber);
+    assert accountMatches : 
+        String.format("From Account is incorrect. Expected to contain: %s, but got: %s", accountNumber, fromAccountText);
+    
+    String expectedYouExchange = "£" + enteredAmount + ".00";
+    assert youExchangeText.equals(expectedYouExchange) : 
+        String.format("You exchange amount is incorrect. Expected: %s, but got: %s", expectedYouExchange, youExchangeText);
+    
+    assert rateText.equals(exchangeRate) :
+        String.format("Exchange rate is incorrect. Expected: %s, but got: %s", exchangeRate, rateText);
+    
+    double youExchangeValue = extractAmountFromText(youExchangeText);
+    double exchangeFeeValue = extractAmountFromText(exchangeFeeText);
+    double totalAmountValue = extractAmountFromText(totalAmountText);
+    double expectedTotal = youExchangeValue + exchangeFeeValue;
+    
+    assert Math.abs(totalAmountValue - expectedTotal) < 0.01 : 
+        String.format("Total amount calculation is incorrect. Expected: %.2f, but got: %.2f", expectedTotal, totalAmountValue);
+    
+    System.out.println("Confirmation details verified successfully!");
+}
+
+private double extractRateFromText(String rateText)
+{
+    try {
+        String[] parts = rateText.split(" = €");
+        if (parts.length == 2) {
+            return Double.parseDouble(parts[1]);
+        }
+        parts = rateText.split("=");
+        if (parts.length == 2) {
+            String ratePart = parts[1].trim();
+            return Double.parseDouble(ratePart.replaceAll("[^0-9.]", ""));
+        }
+        throw new RuntimeException("Cannot extract rate from text: " + rateText);
+    } catch (Exception e) {
+        throw new RuntimeException("Error parsing rate from text: " + rateText, e);
     }
+}
+
+private double extractAmountFromText(String text)
+{
+    String numericPart = text.replaceAll("[^0-9.]", "");
+    return Double.parseDouble(numericPart);
+}
 
     public void clickConfirmExchange()
     {
@@ -393,28 +520,6 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
     public void clickTransactionDetails()
     {
         this.waitForElementAndClick(TRANSACTION_DETAILS_TITLE, "Cannot click on transaction details", 5);
-    }
-
-    public void verifyTransactionDetailsContent()
-    {
-        this.waitForElementPresent(TRANSACTION_AMOUNT, "Transaction amount not found", 10);
-        this.waitForElementPresent(TRANSACTION_ICON, "Transaction icon not found", 10);
-        this.waitForElementPresent(TRANSACTION_PAYMENT, "Transaction payment info not found", 10);
-        this.waitForElementPresent(TRANSACTION_DATE, "Transaction date not found", 10);
-        this.waitForElementPresent(TRANSACTION_TYPE_TITLE, "Type title not found", 10);
-        this.waitForElementPresent(TRANSACTION_TYPE_VALUE, "Exchange value not found", 10);
-        this.waitForElementPresent(TRANSACTION_STATUS_TITLE, "Status title not found", 10);
-        this.waitForElementPresent(TRANSACTION_STATUS_VALUE, "Pending value not found", 10);
-        this.waitForElementPresent(TRANSACTION_DESCRIPTION_TITLE, "Description title not found", 10);
-        this.waitForElementPresent(TRANSACTION_CREATED_TITLE, "Created title not found", 10);
-        this.waitForElementPresent(TRANSACTION_PAYMENT_TO_TITLE, "Payment to title not found", 10);
-        this.waitForElementPresent(TRANSACTION_ACCOUNT_NUMBER_TITLE, "Account number title not found", 10);
-        this.waitForElementPresent(TRANSACTION_ID_TITLE, "Transaction ID title not found", 10);
-    }
-
-    public void clickBackButton()
-    {
-        this.waitForElementAndClick(BACK_BUTTON, "Cannot click on back button", 5);
     }
 
     public void clickBackToHome()

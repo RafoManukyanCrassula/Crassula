@@ -3,14 +3,17 @@
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/Android/AndroidCurrencyExchangePageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/Android/AndroidDashboardPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/Android/AndroidLoginPageObject.java
+/Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/Android/AndroidTransactionDetailsPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/CurrencyExchangePageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/DashboardPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/LoginPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/MainPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/SearchPageObject.java
+/Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/TransactionDetailsPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/factories/CurrencyExchangePageObjectFactory.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/factories/DashboardPageObjectFactory.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/factories/LoginPageObjectFactory.java
+/Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/factories/TransactionDetailsPageObjectFactory.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSCurrencyExchangePageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSDashboardPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSLoginPageObject.java

@@ -7,6 +7,7 @@ import lib.ui.factories.CurrencyExchangePageObjectFactory;
 import lib.ui.factories.DashboardPageObjectFactory;
 import lib.ui.factories.LoginPageObjectFactory;
 import lib.ui.CurrencyExchangePageObject;
+import lib.ui.TransactionDetailsPageObject;
 import org.junit.jupiter.api.Test;
 
 public class CurrencyExchangeTest extends CoreTestCase
@@ -61,6 +62,7 @@ public class CurrencyExchangeTest extends CoreTestCase
         exchangePage.clickAccountSelection();
         exchangePage.verifyAccountSelectionModal();
         String accountName = exchangePage.getAccountName();
+        String accountNumber = exchangePage.getAccountNumberFromModal();
         exchangePage.selectAccount(accountName);
         exchangePage.verifyExchangeButtonInForm();
         exchangePage.verifyAccountButton();
@@ -69,19 +71,22 @@ public class CurrencyExchangeTest extends CoreTestCase
         exchangePage.verifyMinusSymbolInFirstField();
         exchangePage.verifyPlusSymbolInSecondField();
         exchangePage.clickFeeInfo();
-        exchangePage.verifyFeeDetailsModal();
+        exchangePage.verifyFeeDetailsModal("1");
         exchangePage.closeFeeDetailsModal();
+        String exchangeRate = exchangePage.getExchangeRate();
         exchangePage.clickExchangeButtonInForm();
         exchangePage.verifyConfirmExchangeTitle();
-        exchangePage.verifyConfirmationDetails();
+        exchangeRate = exchangePage.getExchangeRate();
+        exchangePage.verifyConfirmationDetails("1", accountNumber, exchangeRate);
         exchangePage.clickConfirmExchange();
         exchangePage.verifySuccessTitle();
         exchangePage.verifySuccessMessage();
         exchangePage.verifyExchangeAmount();
         exchangePage.verifyTransactionDetailsTitle();
         exchangePage.clickTransactionDetails();
-        exchangePage.verifyTransactionDetailsContent();
-        exchangePage.clickBackButton();
+        TransactionDetailsPageObject transactionDetailsPage = TransactionDetailsPageObject.get(driver);
+        transactionDetailsPage.verifyTransactionDetailsContent();
+        transactionDetailsPage.clickBackButton();
         exchangePage.clickBackToHome();
         dashboardPage.verifyTransactionOnDashboard();
     }
