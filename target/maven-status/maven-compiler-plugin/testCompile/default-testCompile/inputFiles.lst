@@ -16,6 +16,7 @@
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSCurrencyExchangePageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSDashboardPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSLoginPageObject.java
+/Users/rafomanukyan/Desktop/Crassula/src/test/java/lib/ui/iOS/iOSTransactionDetailsPageObject.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/suites/TestSuite.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/tests/CurrencyExchangeTest.java
 /Users/rafomanukyan/Desktop/Crassula/src/test/java/tests/LoginTests.java

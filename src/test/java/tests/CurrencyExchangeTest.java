@@ -73,7 +73,8 @@ public class CurrencyExchangeTest extends CoreTestCase
         exchangePage.clickFeeInfo();
         exchangePage.verifyFeeDetailsModal("1");
         exchangePage.closeFeeDetailsModal();
-        String exchangeRate = exchangePage.getExchangeRate();
+        exchangePage.getExchangeRate();
+        String exchangeRate;
         exchangePage.clickExchangeButtonInForm();
         exchangePage.verifyConfirmExchangeTitle();
         exchangeRate = exchangePage.getExchangeRate();
