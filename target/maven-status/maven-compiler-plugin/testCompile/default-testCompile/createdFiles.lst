@@ -5,7 +5,6 @@ lib/ui/factories/LoginPageObjectFactory.class
 lib/ui/TransactionDetailsPageObject.class
 tests/CurrencyExchangeTest.class
 lib/ui/Android/AndroidTransactionDetailsPageObject.class
-lib/ui/SearchPageObject.class
 lib/ui/iOS/iOSCurrencyExchangePageObject.class
 lib/ui/factories/DashboardPageObjectFactory.class
 lib/ui/Android/AndroidCurrencyExchangePageObject.class

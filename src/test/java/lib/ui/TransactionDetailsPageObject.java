@@ -37,11 +37,11 @@ abstract public class TransactionDetailsPageObject extends MainPageObject
         this.waitForElementPresent(TRANSACTION_TYPE_VALUE, "Exchange value not found", 10);
         this.waitForElementPresent(TRANSACTION_STATUS_TITLE, "Status title not found", 10);
         this.waitForElementPresent(TRANSACTION_STATUS_VALUE, "Pending value not found", 10);
-        this.waitForElementPresent(TRANSACTION_DESCRIPTION_TITLE, "Description title not found", 10);
-        this.waitForElementPresent(TRANSACTION_CREATED_TITLE, "Created title not found", 10);
-        this.waitForElementPresent(TRANSACTION_PAYMENT_TO_TITLE, "Payment to title not found", 10);
-        this.waitForElementPresent(TRANSACTION_ACCOUNT_NUMBER_TITLE, "Account number title not found", 10);
-        this.waitForElementPresent(TRANSACTION_ID_TITLE, "Transaction ID title not found", 10);
+        this.waitForElementPresent(TRANSACTION_DESCRIPTION_TITLE, "Transaction description title not valid or not found", 10);
+        this.waitForElementPresent(TRANSACTION_CREATED_TITLE, "Transaction creation time not valid or not found", 10);
+        this.waitForElementPresent(TRANSACTION_PAYMENT_TO_TITLE, "Transaction payment to title not valid or not found", 10);
+        this.waitForElementPresent(TRANSACTION_ACCOUNT_NUMBER_TITLE, "Transaction account number not valid or not found", 10);
+        this.waitForElementPresent(TRANSACTION_ID_TITLE, "Transaction ID not valid or not found", 10);
     }
 
     public void clickBackButton()

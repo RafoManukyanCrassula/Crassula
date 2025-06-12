@@ -57,7 +57,7 @@ public class Platform {
         capabilities.setCapability("automationName","UiAutomator2");
         capabilities.setCapability("appPackage","com.crassula.demo");
         capabilities.setCapability("appActivity","com.cratech.crassula.ui.v2.main.MainActivity");
-        capabilities.setCapability("app","/Users/rafomanukyan/Desktop/crassula.apk ");
+        capabilities.setCapability("app","/Users/rafomanukyan/Desktop/crassula.apk");
         capabilities.setCapability("hideKeyboard", true);
         capabilities.setCapability("autoHideKeyboard", true);
 

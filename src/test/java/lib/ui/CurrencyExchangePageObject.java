@@ -255,14 +255,6 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
         this.waitForElementPresent(ACCOUNT_NAME, "Account name not found", 10);
     }
 
-    public String getSelectedAccountNumber()
-    {
-        WebElement accountElement = this.waitForElementPresent(ACCOUNT_NAME, "Account name not found", 10);
-        String accountText = accountElement.getAttribute("text");
-        String[] parts = accountText.split(" ");
-        return parts[0];
-    }
-
     public String getAccountNumberFromModal()
     {
          WebElement accountElement = this.waitForElementPresent("xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListTitle']", "Account name in modal not found", 10
@@ -371,11 +363,6 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
         
         assert Math.abs(totalAmountValue - expectedTotal) < 0.01 :
             String.format("Total amount calculation is incorrect. Expected: %.2f, but got: %.2f", expectedTotal, totalAmountValue);
-        
-        System.out.println("Fee details verified successfully:");
-        System.out.println("You exchange: " + youExchangeText);
-        System.out.println("Exchange fee: " + exchangeFeeText);
-        System.out.println("Total amount: " + totalAmountText);
     }
 
     public void closeFeeDetailsModal()
@@ -415,8 +402,8 @@ public void verifyConfirmationDetails(String enteredAmount, String accountNumber
     WebElement youGetElement = this.waitForElementPresent(
         "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]", 
         "You get value not found", 10);
-    String youGetText = youGetElement.getAttribute("text");
-    
+    youGetElement.getAttribute("text");
+
     WebElement rateElement = this.waitForElementPresent(
         "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[4]", 
         "Rate value not found", 10);
@@ -431,18 +418,6 @@ public void verifyConfirmationDetails(String enteredAmount, String accountNumber
         "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[6]", 
         "Total amount value not found", 10);
     String totalAmountText = totalAmountElement.getAttribute("text");
-    
-    System.out.println("=== DEBUG: Confirmation details ===");
-    System.out.println("From Account: " + fromAccountText);
-    System.out.println("You exchange: " + youExchangeText);
-    System.out.println("You get: " + youGetText);
-    System.out.println("Rate: " + rateText);
-    System.out.println("Exchange fee: " + exchangeFeeText);
-    System.out.println("Total amount: " + totalAmountText);
-    System.out.println("Expected account: " + accountNumber);
-    System.out.println("Expected rate: " + exchangeRate);
-    System.out.println("=== END DEBUG ===");
-    
 
     boolean accountMatches = fromAccountText.contains(accountNumber) ||
                            fromAccountText.equals(accountNumber + " (GBP)") ||
@@ -466,24 +441,6 @@ public void verifyConfirmationDetails(String enteredAmount, String accountNumber
         String.format("Total amount calculation is incorrect. Expected: %.2f, but got: %.2f", expectedTotal, totalAmountValue);
     
     System.out.println("Confirmation details verified successfully!");
-}
-
-private double extractRateFromText(String rateText)
-{
-    try {
-        String[] parts = rateText.split(" = €");
-        if (parts.length == 2) {
-            return Double.parseDouble(parts[1]);
-        }
-        parts = rateText.split("=");
-        if (parts.length == 2) {
-            String ratePart = parts[1].trim();
-            return Double.parseDouble(ratePart.replaceAll("[^0-9.]", ""));
-        }
-        throw new RuntimeException("Cannot extract rate from text: " + rateText);
-    } catch (Exception e) {
-        throw new RuntimeException("Error parsing rate from text: " + rateText, e);
-    }
 }
 
 private double extractAmountFromText(String text)
