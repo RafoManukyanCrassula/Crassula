@@ -1,7 +1,6 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import lib.Platform;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -194,5 +193,10 @@ public abstract class MainPageObject {
             System.out.println("Something went wrong while taking screenshot: " + e.getMessage());
         }
         return bytes;
+    }
+    public String waitForElementAndGetAttribute(String locator, String attribute, String errorMessage, long timeoutInSeconds)
+    {
+        WebElement element = waitForElementPresent(locator, errorMessage, timeoutInSeconds);
+        return element.getAttribute(attribute);
     }
 }

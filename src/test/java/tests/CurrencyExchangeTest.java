@@ -91,4 +91,74 @@ public class CurrencyExchangeTest extends CoreTestCase
         exchangePage.clickBackToHome();
         dashboardPage.verifyTransactionOnDashboard();
     }
+@Test
+public void testInsufficientFundsValidation()
+{
+    LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
+
+    try {
+        Thread.sleep(3000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+
+    loginPage.verifyLoginButtonExists();
+    loginPage.clickLoginButton();
+    loginPage.performLogin("client@crassula.io", "Qwerty123");
+    loginPage.createPasscode();
+    DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
+    dashboardPage.waitForDashboardToLoad();
+    dashboardPage.checkTransactionsTextPresent();
+
+    CurrencyExchangePageObject exchangePage = CurrencyExchangePageObjectFactory.get(driver);
+    exchangePage.clickExchangeButton();
+
+    double greaterAmount = getGreaterAmount(exchangePage);
+    exchangePage.validateInsufficientFundsError(greaterAmount);
+    
+    System.out.println("Validation for insufficient funds passed.");
+}
+
+    private static double getGreaterAmount(CurrencyExchangePageObject exchangePage) {
+        String balanceText = exchangePage.getBalanceAmount();
+        String numericBalanceText = balanceText
+                .replace("Balance:", "")
+                .replace("GBP", "")
+                .trim();
+
+        double currentBalance;
+        try {
+            currentBalance = Double.parseDouble(numericBalanceText);
+        } catch (NumberFormatException e) {
+            throw new RuntimeException("Failed to parse balance: " + balanceText, e);
+        }
+
+        return currentBalance + 10.0;
+    }
+
+    @Test
+public void testUnavailableCurrencyPairValidation()
+{
+    LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
+
+    try {
+        Thread.sleep(3000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+
+    loginPage.verifyLoginButtonExists();
+    loginPage.clickLoginButton();
+    loginPage.performLogin("client@crassula.io", "Qwerty123");
+    loginPage.createPasscode();
+    DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
+    dashboardPage.waitForDashboardToLoad();
+    dashboardPage.checkTransactionsTextPresent();
+
+    CurrencyExchangePageObject exchangePage = CurrencyExchangePageObjectFactory.get(driver);
+    exchangePage.clickExchangeButton();
+    exchangePage.validateCurrencyPairUnavailableError();
+
+    System.out.println("Validation for unavailable currency pair passed.");
+}
 }

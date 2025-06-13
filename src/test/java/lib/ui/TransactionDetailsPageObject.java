@@ -3,6 +3,8 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import lib.ui.factories.TransactionDetailsPageObjectFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import java.util.Arrays;
+import java.util.List;
 
 abstract public class TransactionDetailsPageObject extends MainPageObject
 {
@@ -36,7 +38,21 @@ abstract public class TransactionDetailsPageObject extends MainPageObject
         this.waitForElementPresent(TRANSACTION_TYPE_TITLE, "Type title not found", 10);
         this.waitForElementPresent(TRANSACTION_TYPE_VALUE, "Exchange value not found", 10);
         this.waitForElementPresent(TRANSACTION_STATUS_TITLE, "Status title not found", 10);
-        this.waitForElementPresent(TRANSACTION_STATUS_VALUE, "Pending value not found", 10);
+        this.waitForElementPresent(
+                TRANSACTION_STATUS_VALUE,
+                "Transaction status not valid or not found",
+                10
+        );
+        String status = this.waitForElementAndGetAttribute(
+                TRANSACTION_STATUS_VALUE,
+                "text",
+                "Can't get text of transaction status",
+                10
+        );
+        List<String> validStatuses = Arrays.asList("Pending", "Draft", "Processing", "Rejected", "Cancelled", "Failed", "Completed");
+        if (!validStatuses.contains(status)) {
+            throw new AssertionError("Transaction status is not valid. Found: " + status + ". Valid statuses: " + validStatuses);
+        }
         this.waitForElementPresent(TRANSACTION_DESCRIPTION_TITLE, "Transaction description title not valid or not found", 10);
         this.waitForElementPresent(TRANSACTION_CREATED_TITLE, "Transaction creation time not valid or not found", 10);
         this.waitForElementPresent(TRANSACTION_PAYMENT_TO_TITLE, "Transaction payment to title not valid or not found", 10);

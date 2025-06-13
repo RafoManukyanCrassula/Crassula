@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CurrencyExchangeTest" time="59.819" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CurrencyExchangeTest" time="140.6" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AM"/>
     <property name="sun.boot.library.path" value="/Users/rafomanukyan/Library/Java/JavaVirtualMachines/openjdk-24.0.1/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250613000556843_3.jar /Users/rafomanukyan/Desktop/Crassula/target/surefire 2025-06-13T00-05-56_794-jvmRun1 surefire-20250613000556843_1tmp surefire_0-20250613000556843_2tmp"/>
+    <property name="sun.java.command" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250613163043928_3.jar /Users/rafomanukyan/Desktop/Crassula/target/surefire 2025-06-13T16-30-43_880-jvmRun1 surefire-20250613163043928_1tmp surefire_0-20250613163043928_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="CurrencyExchangeTest"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250613000556843_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250613163043928_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -59,8 +59,16 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testCurrencyExchange" classname="tests.CurrencyExchangeTest" time="59.805">
+  <testcase name="testCurrencyExchange" classname="tests.CurrencyExchangeTest" time="65.488">
     <system-out><![CDATA[Confirmation details verified successfully!
+]]></system-out>
+  </testcase>
+  <testcase name="testUnavailableCurrencyPairValidation" classname="tests.CurrencyExchangeTest" time="34.744">
+    <system-out><![CDATA[Validation for unavailable currency pair passed.
+]]></system-out>
+  </testcase>
+  <testcase name="testInsufficientFundsValidation" classname="tests.CurrencyExchangeTest" time="40.345">
+    <system-out><![CDATA[Validation for insufficient funds passed.
 ]]></system-out>
   </testcase>
 </testsuite>

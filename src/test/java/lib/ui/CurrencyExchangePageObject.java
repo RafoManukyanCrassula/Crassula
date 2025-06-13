@@ -1,6 +1,7 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import lib.ui.factories.ValidationHelperObjectFactory;
 import org.openqa.selenium.WebElement;
 
 abstract public class CurrencyExchangePageObject extends MainPageObject
@@ -56,12 +57,48 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
             DASHBOARD_TRANSACTION,
             FEE_DETAILS_YOU_EXCHANGE_VALUE,
             FEE_DETAILS_EXCHANGE_FEE_VALUE,
-            FEE_DETAILS_TOTAL_AMOUNT_VALUE;
+            FEE_DETAILS_TOTAL_AMOUNT_VALUE,
+            UNAVAILABLE_CURRENCY_PAIR_ERROR,
+            UNI_CURRENCY_OPTION;  // Добавляем эту константу
 
     public CurrencyExchangePageObject(AppiumDriver driver)
     {
         super(driver);
     }
+
+public void validateInsufficientFundsError(double amount)
+{
+    ValidationHelperObject validationHelperObject = ValidationHelperObjectFactory.get(driver);
+    validationHelperObject.enterAmountGreaterThanBalance(FIRST_EDIT_AMOUNT, amount);
+    validationHelperObject.verifyInsufficientFundsError();
+}
+
+public void validateCurrencyPairUnavailableError()
+{
+    this.waitForElementAndClick(
+            SECOND_CURRENCY_BUTTON_GENERIC,
+            "Cannot click on second currency button",
+            5
+    );
+
+    this.swipeUpToFindElement(
+            UNI_CURRENCY_OPTION,
+            "Cannot find UNI currency in the list",
+            10
+    );
+
+    this.waitForElementAndClick(
+            UNI_CURRENCY_OPTION,
+            "Cannot select UNI currency",
+            5
+    );
+
+    this.waitForElementPresent(
+            UNAVAILABLE_CURRENCY_PAIR_ERROR,
+            "Unavailable currency pair error message was not displayed",
+            10
+    );
+}
 
     public void verifyExchangeButtonExists()
     {
@@ -379,6 +416,16 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
     {
         this.waitForElementPresent(CONFIRM_EXCHANGE_TITLE, "Confirm exchange title not found", 10);
     }
+
+public String getBalanceAmount()
+{
+    WebElement balanceElement = this.waitForElementPresent(
+        "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelBalance']",
+        "Cannot find balance field",
+        10
+    );
+    return balanceElement.getText();
+}
 
 public void verifyConfirmationDetails(String enteredAmount, String accountNumber, String exchangeRate)
 {
