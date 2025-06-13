@@ -55,7 +55,7 @@
             <artifactId>logback-classic</artifactId>
             <version>1.5.18</version>
         </dependency>
-        <!-- УДАЛЯЕМ ЭТУ ЗАВИСИМОСТЬ - проект не может зависеть от самого себя!
+        <!--
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>Crassula</artifactId>
