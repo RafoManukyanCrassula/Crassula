@@ -57,7 +57,7 @@ public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObjec
         FEE_DETAILS_EXCHANGE_FEE_VALUE = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[2]";
         FEE_DETAILS_TOTAL_AMOUNT_VALUE = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]";
         UNAVAILABLE_CURRENCY_PAIR_ERROR = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelBalance' and @text='The exchange of these currency pairs GBP-UNI is currently unavailable']";
-        UNI_CURRENCY_OPTION = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListSubTitle' and @text='UNI']"; // Добавляем
+        UNI_CURRENCY_OPTION = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListSubTitle' and @text='UNI']";
     }
 
     public AndroidCurrencyExchangePageObject(AppiumDriver driver) {

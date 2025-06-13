@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: tests.CurrencyExchangeTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 140.6 s -- in tests.CurrencyExchangeTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 40.70 s <<< FAILURE! -- in tests.CurrencyExchangeTest
+tests.CurrencyExchangeTest.testCurrencyExchange -- Time elapsed: 40.68 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.split(String, int)" because "locator_with_type" is null
+	at lib.ui.MainPageObject.getLocatorByString(MainPageObject.java:148)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:46)
+	at lib.ui.CurrencyExchangePageObject.getFirstCurrencyButtonText(CurrencyExchangePageObject.java:129)
+	at tests.CurrencyExchangeTest.testCurrencyExchange(CurrencyExchangeTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
