@@ -9,8 +9,7 @@ public class AndroidDashboardPageObject extends DashboardPageObject {
         TRANSACTIONS_TEXT = "xpath://android.widget.TextView[@text='Transactions']";
     }
 
-    public AndroidDashboardPageObject(AppiumDriver driver)
-    {
+    public AndroidDashboardPageObject(AppiumDriver driver) {
         super(driver);
     }
 }

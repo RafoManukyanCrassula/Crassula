@@ -3,8 +3,7 @@ package lib.ui.iOS;
 import io.appium.java_client.AppiumDriver;
 import lib.ui.LoginPageObject;
 
-public class iOSLoginPageObject extends LoginPageObject
-{
+public class iOSLoginPageObject extends LoginPageObject {
     static {
         SIGN_UP_BUTTON = "xpath://XCUIElementTypeStaticText[@name='Sign up']";
         LOGIN_BUTTON = "xpath://XCUIElementTypeStaticText[@name='Log in']";
@@ -24,8 +23,7 @@ public class iOSLoginPageObject extends LoginPageObject
         ALERT_OK_BUTTON = "id:OK";
     }
 
-    public iOSLoginPageObject(AppiumDriver driver)
-    {
+    public iOSLoginPageObject(AppiumDriver driver) {
         super(driver);
     }
 }

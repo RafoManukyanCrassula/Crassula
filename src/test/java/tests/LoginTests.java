@@ -7,20 +7,18 @@ import lib.ui.factories.DashboardPageObjectFactory;
 import lib.ui.LoginPageObject;
 import org.junit.jupiter.api.Test;
 
-public class LoginTests extends CoreTestCase
-{
+public class LoginTests extends CoreTestCase {
     @Test
-    public void testLogin()
-    {
+    public void testLogin() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
-        
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException
                 e) {
             e.printStackTrace();
         }
-        
+
         loginPage.verifyLoginButtonExists();
         loginPage.verifyLoginButtonText("Log in");
         loginPage.clickLoginButton();
@@ -32,34 +30,41 @@ public class LoginTests extends CoreTestCase
         dashboardPage.waitForDashboardToLoad();
         dashboardPage.checkTransactionsTextPresent();
     }
-    
+
     @Test
-    public void testBlankFieldsValidation()
-    {
+    public void testBlankFieldsValidation() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
-        
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        
+
         loginPage.clickLoginButton();
         loginPage.clickEmailField();
-        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException _) {
+        }
         loginPage.clickPasswordField();
-        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException _) {
+        }
         loginPage.verifyValidationErrorMustBePresent("The value should not be blank");
         loginPage.clickEmailField();
-        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException _) {
+        }
         loginPage.verifyValidationErrorMustBePresent("The value should not be blank");
     }
-    
+
     @Test
-    public void testInvalidEmailValidation()
-    {
+    public void testInvalidEmailValidation() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
-        
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -73,8 +78,7 @@ public class LoginTests extends CoreTestCase
     }
 
     @Test
-    public void testInvalidCredentialsAlert()
-    {
+    public void testInvalidCredentialsAlert() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
 
         loginPage.clickLoginButton();

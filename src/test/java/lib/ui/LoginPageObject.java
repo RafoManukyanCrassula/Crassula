@@ -2,10 +2,10 @@ package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginPageObject extends MainPageObject
-{
+public class LoginPageObject extends MainPageObject {
     protected static String
             LOGIN_BUTTON,
             SIGN_UP_BUTTON,
@@ -24,13 +24,11 @@ public class LoginPageObject extends MainPageObject
             ALERT_MESSAGE,
             ALERT_OK_BUTTON;
 
-    public LoginPageObject(AppiumDriver driver)
-    {
+    public LoginPageObject(AppiumDriver driver) {
         super(driver);
     }
 
-    public void verifyLoginButtonExists()
-    {
+    public void verifyLoginButtonExists() {
         waitForElementPresent(
                 LOGIN_BUTTON,
                 "Cannot find Login button",
@@ -38,8 +36,7 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public String getLoginButtonText()
-    {
+    public String getLoginButtonText() {
         WebElement loginButton = waitForElementPresent(
                 LOGIN_BUTTON,
                 "Cannot find Login button",
@@ -48,8 +45,7 @@ public class LoginPageObject extends MainPageObject
         return loginButton.getText();
     }
 
-    public void verifyLoginButtonText(String expectedText)
-    {
+    public void verifyLoginButtonText(String expectedText) {
         String actualText = getLoginButtonText();
         assertEquals(
                 expectedText,
@@ -58,14 +54,13 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void clickLoginButton()
-    {
+    public void clickLoginButton() {
         waitForElementPresent(
                 SIGN_UP_BUTTON,
                 "Cannot find Sign up button",
                 10
         );
-        
+
         waitForElementAndClick(
                 LOGIN_BUTTON,
                 "Cannot find login button",
@@ -73,8 +68,7 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void verifyLoginPageElements()
-    {
+    public void verifyLoginPageElements() {
         waitForElementPresent(LOGIN_TITLE, "Cannot find login title", 10);
         waitForElementPresent(EMAIL_LABEL, "Cannot find Email label", 10);
         waitForElementPresent(PASSWORD_LABEL, "Cannot find Password label", 10);
@@ -83,29 +77,31 @@ public class LoginPageObject extends MainPageObject
         waitForElementPresent(CONTINUE_BUTTON, "Cannot find Continue button", 10);
     }
 
-    public void enterEmail(String email)
-    {
+    public void enterEmail(String email) {
         this.waitForElementAndClick(EMAIL_LABEL, "Cannot find and click email label", 5);
-        try { Thread.sleep(2000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException _) {
+        }
         this.waitForElementAndSendKeys(USERNAME_FIELD, email, "Cannot find email input field", 5);
     }
 
-    public void enterPassword(String password)
-    {
+    public void enterPassword(String password) {
         this.waitForElementAndClick(PASSWORD_LABEL, "Cannot find and click password label", 5);
-        try { Thread.sleep(2000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException _) {
+        }
         this.waitForElementAndSendKeys(PASSWORD_FIELD, password, "Cannot find password input field", 5);
     }
 
-    public void performLogin(String email, String password)
-    {
+    public void performLogin(String email, String password) {
         enterEmail(email);
         enterPassword(password);
         clickContinueButton();
     }
 
-    public void clickContinueButton()
-    {
+    public void clickContinueButton() {
         waitForElementAndClick(
                 CONTINUE_BUTTON,
                 "Cannot find Continue button",
@@ -113,23 +109,24 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void createPasscode()
-    {
+    public void createPasscode() {
         this.waitForElementPresent(PASSCODE_TITLE, "Cannot find passcode creation screen", 10);
-        
+
         for (int i = 0; i < 4; i++) {
             this.waitForElementAndClick(PASSCODE_BUTTON_1, "Cannot find button '1'", 5);
         }
-        
-        try { Thread.sleep(2000); } catch (InterruptedException _) {}
-        
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException _) {
+        }
+
         for (int i = 0; i < 4; i++) {
             this.waitForElementAndClick(PASSCODE_BUTTON_1, "Cannot find button '1'", 5);
         }
     }
 
-    public void clickEmailField()
-    {
+    public void clickEmailField() {
         waitForElementAndClick(
                 EMAIL_LABEL,
                 "Cannot find email label",
@@ -137,8 +134,7 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void clickPasswordField()
-    {
+    public void clickPasswordField() {
         waitForElementAndClick(
                 PASSWORD_LABEL,
                 "Cannot find password label",
@@ -146,8 +142,7 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public boolean isValidationErrorPresent()
-    {
+    public boolean isValidationErrorPresent() {
         try {
             waitForElementPresent(VALIDATION_ERROR, "Validation error not found", 3);
             return true;
@@ -156,8 +151,7 @@ public class LoginPageObject extends MainPageObject
         }
     }
 
-    public String getValidationErrorText()
-    {
+    public String getValidationErrorText() {
         WebElement errorElement = waitForElementPresent(
                 VALIDATION_ERROR,
                 "Cannot find validation error message",
@@ -166,8 +160,7 @@ public class LoginPageObject extends MainPageObject
         return errorElement.getText();
     }
 
-    public void verifyValidationError(String expectedError)
-    {
+    public void verifyValidationError(String expectedError) {
         String actualError = getValidationErrorText();
         assertEquals(
                 expectedError,
@@ -176,16 +169,17 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void enterInvalidEmail(String invalidEmail)
-    {
+    public void enterInvalidEmail(String invalidEmail) {
         this.waitForElementAndClick(EMAIL_LABEL, "Cannot find email label", 5);
-        try { Thread.sleep(1000); } catch (InterruptedException _) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException _) {
+        }
         this.waitForElementAndSendKeys(USERNAME_FIELD, invalidEmail, "Cannot find email input field", 5);
         clickPasswordField();
     }
 
-    public String getAlertTitle()
-    {
+    public String getAlertTitle() {
         WebElement alertTitle = waitForElementPresent(
                 ALERT_TITLE,
                 "Cannot find alert title",
@@ -194,8 +188,7 @@ public class LoginPageObject extends MainPageObject
         return alertTitle.getText();
     }
 
-    public String getAlertMessage()
-    {
+    public String getAlertMessage() {
         WebElement alertMessage = waitForElementPresent(
                 ALERT_MESSAGE,
                 "Cannot find alert message",
@@ -204,15 +197,14 @@ public class LoginPageObject extends MainPageObject
         return alertMessage.getText();
     }
 
-    public void verifyWrongCredentialsAlert()
-    {
+    public void verifyWrongCredentialsAlert() {
         String actualTitle = getAlertTitle();
         assertEquals(
                 "Wrong credentials",
                 actualTitle,
                 "Alert title does not match expected value"
         );
-        
+
         String actualMessage = getAlertMessage();
         assertEquals(
                 "The email or password you entered is incorrect",
@@ -221,8 +213,7 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void clickAlertOkButton()
-    {
+    public void clickAlertOkButton() {
         waitForElementAndClick(
                 ALERT_OK_BUTTON,
                 "Cannot find OK button in alert",
@@ -230,8 +221,7 @@ public class LoginPageObject extends MainPageObject
         );
     }
 
-    public void verifyValidationErrorMustBePresent(String expectedError)
-    {
+    public void verifyValidationErrorMustBePresent(String expectedError) {
         if (!isValidationErrorPresent()) {
             throw new AssertionError("Validation error MUST be present but was not found! Expected: " + expectedError);
         }

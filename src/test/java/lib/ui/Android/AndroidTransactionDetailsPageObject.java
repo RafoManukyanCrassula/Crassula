@@ -3,8 +3,7 @@ package lib.ui.Android;
 import lib.ui.TransactionDetailsPageObject;
 import io.appium.java_client.AppiumDriver;
 
-public class AndroidTransactionDetailsPageObject extends TransactionDetailsPageObject
-{
+public class AndroidTransactionDetailsPageObject extends TransactionDetailsPageObject {
     static {
         TRANSACTION_AMOUNT = "id:com.crassula.demo:id/labelAmount";
         TRANSACTION_ICON = "id:com.crassula.demo:id/imageIcon";
@@ -22,8 +21,7 @@ public class AndroidTransactionDetailsPageObject extends TransactionDetailsPageO
         BACK_BUTTON = "id:com.crassula.demo:id/buttonBack";
     }
 
-    public AndroidTransactionDetailsPageObject(AppiumDriver driver)
-    {
+    public AndroidTransactionDetailsPageObject(AppiumDriver driver) {
         super(driver);
     }
 }

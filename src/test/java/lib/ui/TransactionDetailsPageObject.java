@@ -3,34 +3,32 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import lib.ui.factories.TransactionDetailsPageObjectFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.util.Arrays;
 import java.util.List;
 
-abstract public class TransactionDetailsPageObject extends MainPageObject
-{
+abstract public class TransactionDetailsPageObject extends MainPageObject {
     protected static String
-        TRANSACTION_AMOUNT,
-        TRANSACTION_ICON,
-        TRANSACTION_PAYMENT,
-        TRANSACTION_DATE,
-        TRANSACTION_TYPE_TITLE,
-        TRANSACTION_TYPE_VALUE,
-        TRANSACTION_STATUS_TITLE,
-        TRANSACTION_STATUS_VALUE,
-        TRANSACTION_DESCRIPTION_TITLE,
-        TRANSACTION_CREATED_TITLE,
-        TRANSACTION_PAYMENT_TO_TITLE,
-        TRANSACTION_ACCOUNT_NUMBER_TITLE,
-        TRANSACTION_ID_TITLE,
-        BACK_BUTTON;
+            TRANSACTION_AMOUNT,
+            TRANSACTION_ICON,
+            TRANSACTION_PAYMENT,
+            TRANSACTION_DATE,
+            TRANSACTION_TYPE_TITLE,
+            TRANSACTION_TYPE_VALUE,
+            TRANSACTION_STATUS_TITLE,
+            TRANSACTION_STATUS_VALUE,
+            TRANSACTION_DESCRIPTION_TITLE,
+            TRANSACTION_CREATED_TITLE,
+            TRANSACTION_PAYMENT_TO_TITLE,
+            TRANSACTION_ACCOUNT_NUMBER_TITLE,
+            TRANSACTION_ID_TITLE,
+            BACK_BUTTON;
 
-    public TransactionDetailsPageObject(RemoteWebDriver driver)
-    {
+    public TransactionDetailsPageObject(RemoteWebDriver driver) {
         super((AppiumDriver) driver);
     }
 
-    public void verifyTransactionDetailsContent()
-    {
+    public void verifyTransactionDetailsContent() {
         this.waitForElementPresent(TRANSACTION_AMOUNT, "Transaction amount not found", 10);
         this.waitForElementPresent(TRANSACTION_ICON, "Transaction icon not found", 10);
         this.waitForElementPresent(TRANSACTION_PAYMENT, "Transaction payment info not found", 10);
@@ -60,13 +58,11 @@ abstract public class TransactionDetailsPageObject extends MainPageObject
         this.waitForElementPresent(TRANSACTION_ID_TITLE, "Transaction ID not valid or not found", 10);
     }
 
-    public void clickBackButton()
-    {
+    public void clickBackButton() {
         this.waitForElementAndClick(BACK_BUTTON, "Back button not found", 10);
     }
 
-    public static TransactionDetailsPageObject get(RemoteWebDriver driver)
-    {
+    public static TransactionDetailsPageObject get(RemoteWebDriver driver) {
         return TransactionDetailsPageObjectFactory.get(driver);
     }
 }

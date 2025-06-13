@@ -3,8 +3,7 @@ package lib.ui.Android;
 import io.appium.java_client.AppiumDriver;
 import lib.ui.LoginPageObject;
 
-public class AndroidLoginPageObject extends LoginPageObject
-{
+public class AndroidLoginPageObject extends LoginPageObject {
     static {
         LOGIN_BUTTON = "id:com.crassula.demo:id/buttonLogin";
         SIGN_UP_BUTTON = "id:com.crassula.demo:id/buttonSignUp";
@@ -24,8 +23,7 @@ public class AndroidLoginPageObject extends LoginPageObject
         ALERT_OK_BUTTON = "id:android:id/button1";
     }
 
-    public AndroidLoginPageObject(AppiumDriver driver)
-    {
+    public AndroidLoginPageObject(AppiumDriver driver) {
         super(driver);
     }
 }

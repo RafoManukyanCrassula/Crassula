@@ -3,8 +3,7 @@ package lib.ui.Android;
 import io.appium.java_client.AppiumDriver;
 import lib.ui.CurrencyExchangePageObject;
 
-public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObject
-{
+public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObject {
     static {
         EXCHANGE_BUTTON = "id:com.crassula.demo:id/buttonExchange";
         EXCHANGE_PAGE_TITLE = "xpath://android.widget.TextView[@text='Exchange']";
@@ -61,8 +60,7 @@ public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObjec
         UNI_CURRENCY_OPTION = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListSubTitle' and @text='UNI']"; // Добавляем
     }
 
-    public AndroidCurrencyExchangePageObject(AppiumDriver driver)
-    {
+    public AndroidCurrencyExchangePageObject(AppiumDriver driver) {
         super(driver);
     }
 }

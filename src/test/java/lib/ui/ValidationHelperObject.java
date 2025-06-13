@@ -2,20 +2,17 @@ package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
 
-public class ValidationHelperObject extends MainPageObject
-{
+public class ValidationHelperObject extends MainPageObject {
     protected static String
             INSUFFICIENT_FUNDS_ERROR,
             VALIDATION_ERROR_CONTAINER,
             GENERAL_ERROR_MESSAGE;
 
-    public ValidationHelperObject(AppiumDriver driver)
-    {
+    public ValidationHelperObject(AppiumDriver driver) {
         super(driver);
     }
 
-    public void verifyInsufficientFundsError()
-    {
+    public void verifyInsufficientFundsError() {
         this.waitForElementPresent(
                 INSUFFICIENT_FUNDS_ERROR,
                 "Insufficient funds error message was not displayed",
@@ -23,16 +20,14 @@ public class ValidationHelperObject extends MainPageObject
         );
     }
 
-    public void verifyInsufficientFundsErrorNotPresent()
-    {
+    public void verifyInsufficientFundsErrorNotPresent() {
         this.assertElementNotPresent(
                 INSUFFICIENT_FUNDS_ERROR,
                 "Insufficient funds error should not be displayed"
         );
     }
 
-    public void verifyValidationError(String expectedErrorMessage)
-    {
+    public void verifyValidationError(String expectedErrorMessage) {
         String dynamicErrorLocator = GENERAL_ERROR_MESSAGE.replace("{ERROR_TEXT}", expectedErrorMessage);
         this.waitForElementPresent(
                 dynamicErrorLocator,
@@ -41,8 +36,7 @@ public class ValidationHelperObject extends MainPageObject
         );
     }
 
-    public void enterAmountGreaterThanBalance(String amountFieldLocator, double amount)
-    {
+    public void enterAmountGreaterThanBalance(String amountFieldLocator, double amount) {
         String amountString = String.valueOf((int) amount);
 
         this.waitForElementAndClick(
@@ -68,5 +62,6 @@ public class ValidationHelperObject extends MainPageObject
         }
     }
 
-    private void clearField(String fieldLocator) {}
+    private void clearField(String fieldLocator) {
+    }
 }

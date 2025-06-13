@@ -7,5 +7,7 @@ import tests.*;
 @Suite
 @SelectClasses({
         LoginTests.class,
+        CurrencyExchangeTest.class
 })
-public class TestSuite {}
+public class TestSuite {
+}

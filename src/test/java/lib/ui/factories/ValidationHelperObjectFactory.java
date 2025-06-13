@@ -6,10 +6,8 @@ import lib.ui.Android.AndroidValidationHelperObject;
 import lib.ui.ValidationHelperObject;
 import lib.ui.iOS.iOSValidationHelperObject;
 
-public class ValidationHelperObjectFactory
-{
-    public static ValidationHelperObject get(AppiumDriver driver)
-    {
+public class ValidationHelperObjectFactory {
+    public static ValidationHelperObject get(AppiumDriver driver) {
         if (Platform.getInstance().isAndroid()) {
             return new AndroidValidationHelperObject(driver);
         } else {

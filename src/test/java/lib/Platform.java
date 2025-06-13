@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.net.URL;
 
 public class Platform {
@@ -14,18 +15,17 @@ public class Platform {
 
     private static Platform instance;
 
-    private Platform() {}
+    private Platform() {
+    }
 
-    public static Platform getInstance()
-    {
+    public static Platform getInstance() {
         if (instance == null) {
             instance = new Platform();
         }
         return instance;
     }
 
-    public static AppiumDriver getDriver() throws Exception
-    {
+    public static AppiumDriver getDriver() throws Exception {
         URL URL = new URL(APPIUM_URL);
         Platform platform = Platform.getInstance();
         if (platform.isAndroid()) {
@@ -37,40 +37,36 @@ public class Platform {
         }
     }
 
-    public boolean isAndroid()
-    {
+    public boolean isAndroid() {
         return isPlatform(PLATFORM_ANDROID);
     }
 
-    public boolean isIOS()
-    {
+    public boolean isIOS() {
         return isPlatform(PLATFORM_IOS);
     }
 
-    private DesiredCapabilities getCapabilitiesForAndroid()
-    {
+    private DesiredCapabilities getCapabilitiesForAndroid() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability("platformName","Android");
-        capabilities.setCapability("deviceName","AndroidTestDevice");
-        capabilities.setCapability("platformVersion","12.0");
-        capabilities.setCapability("automationName","UiAutomator2");
-        capabilities.setCapability("appPackage","com.crassula.demo");
-        capabilities.setCapability("appActivity","com.cratech.crassula.ui.v2.main.MainActivity");
-        capabilities.setCapability("app","/Users/rafomanukyan/Desktop/crassula.apk");
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName", "AndroidTestDevice");
+        capabilities.setCapability("platformVersion", "12.0");
+        capabilities.setCapability("automationName", "UiAutomator2");
+        capabilities.setCapability("appPackage", "com.crassula.demo");
+        capabilities.setCapability("appActivity", "com.cratech.crassula.ui.v2.main.MainActivity");
+        capabilities.setCapability("app", "/Users/rafomanukyan/Desktop/crassula.apk");
         capabilities.setCapability("hideKeyboard", true);
         capabilities.setCapability("autoHideKeyboard", true);
 
         return capabilities;
     }
 
-    private DesiredCapabilities getCapabilitiesForIOS()
-    {
+    private DesiredCapabilities getCapabilitiesForIOS() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName","iOS");
-        capabilities.setCapability("deviceName","iPhone 16 Plus");
-        capabilities.setCapability("platformVersion","18.4");
-        capabilities.setCapability("automationName","XCUITest");
+        capabilities.setCapability("platformName", "iOS");
+        capabilities.setCapability("deviceName", "iPhone 16 Plus");
+        capabilities.setCapability("platformVersion", "18.4");
+        capabilities.setCapability("automationName", "XCUITest");
         capabilities.setCapability("app", "/Users/rafomanukyan/Desktop/Crassula.app");
         capabilities.setCapability("autoAcceptAlerts", true);
         capabilities.setCapability("autoAcceptAlertsDelay", 5000);
@@ -78,14 +74,12 @@ public class Platform {
         return capabilities;
     }
 
-    private boolean isPlatform(String my_platform)
-    {
+    private boolean isPlatform(String my_platform) {
         String platform = System.getenv("PLATFORM");
         return my_platform.equals(platform);
     }
 
-    private String getPlatformName()
-    {
+    private String getPlatformName() {
         return System.getenv("PLATFORM");
     }
 }

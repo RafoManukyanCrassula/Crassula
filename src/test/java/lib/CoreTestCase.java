@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
@@ -22,19 +23,16 @@ public class CoreTestCase {
     protected AppiumDriver driver;
 
     @BeforeEach
-    public void setUp() throws Exception
-    {
+    public void setUp() throws Exception {
         driver = Platform.getDriver();
     }
 
     @AfterEach
-    public void tearDown()
-    {
+    public void tearDown() {
         driver.quit();
     }
 
-    protected void rotateScreenPortrait()
-    {
+    protected void rotateScreenPortrait() {
         if (Platform.getInstance().isAndroid()) {
             ((AndroidDriver) driver).rotate(ScreenOrientation.PORTRAIT);
         } else {
@@ -42,8 +40,7 @@ public class CoreTestCase {
         }
     }
 
-    protected void rotateScreenLandscape()
-    {
+    protected void rotateScreenLandscape() {
         if (Platform.getInstance().isAndroid()) {
             ((AndroidDriver) driver).rotate(ScreenOrientation.LANDSCAPE);
         } else {
@@ -51,8 +48,7 @@ public class CoreTestCase {
         }
     }
 
-    protected void backgroundApp()
-    {
+    protected void backgroundApp() {
         if (Platform.getInstance().isAndroid()) {
             ((AndroidDriver) driver).runAppInBackground(Duration.ofSeconds(2));
         } else {
@@ -60,34 +56,31 @@ public class CoreTestCase {
         }
     }
 
-    protected void swipeUp(int timeOfSwipe)
-    {
+    protected void swipeUp(int timeOfSwipe) {
         Dimension size = driver.manage().window().getSize();
         int x = size.width / 2;
         int start_y = (int) (size.height * 0.8);
         int end_y = (int) (size.height * 0.2);
-        
+
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence swipe = new Sequence(finger, 1)
                 .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, start_y))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(finger.createPointerMove(Duration.ofMillis(timeOfSwipe), PointerInput.Origin.viewport(), x, end_y))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        
+
         driver.perform(Collections.singletonList(swipe));
     }
 
-    protected void swipeUpQuick()
-    {
+    protected void swipeUpQuick() {
         swipeUp(200);
     }
 
-    protected void swipeUpToFindElement(By by, String error_message, int max_swipes)
-    {
+    protected void swipeUpToFindElement(By by, String error_message, int max_swipes) {
         int already_swiped = 0;
-        while (driver.findElements(by).isEmpty()){
+        while (driver.findElements(by).isEmpty()) {
 
-            if(already_swiped > max_swipes){
+            if (already_swiped > max_swipes) {
                 waitForElementPresent(by, "Cannot find element by swiping up. \n" + error_message, 0);
                 return;
             }
@@ -96,10 +89,9 @@ public class CoreTestCase {
         }
     }
 
-    protected void swipeElementToLeft(By by, String error_message)
-    {
+    protected void swipeElementToLeft(By by, String error_message) {
         WebElement element = waitForElementPresent(by, error_message, 10);
-        
+
         int left_x = element.getLocation().getX();
         int right_x = left_x + element.getSize().getWidth();
         int upper_y = element.getLocation().getY();
@@ -112,18 +104,16 @@ public class CoreTestCase {
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
                 .addAction(finger.createPointerMove(Duration.ofMillis(300), PointerInput.Origin.viewport(), left_x, middle_y))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        
+
         driver.perform(Collections.singletonList(swipe));
     }
 
-    protected int getAmountOfElements(By by)
-    {
+    protected int getAmountOfElements(By by) {
         List<WebElement> elements = driver.findElements(by);
         return elements.size();
     }
 
-    protected void assertElementNotPresent(By by, String error_message)
-    {
+    protected void assertElementNotPresent(By by, String error_message) {
         int amount_of_elements = getAmountOfElements(by);
         if (amount_of_elements > 0) {
             String default_message = "An element '" + by.toString() + "' supposed to be not present";
@@ -131,14 +121,12 @@ public class CoreTestCase {
         }
     }
 
-    protected String waitForElementAndGetAttribute(By by, String attribute, String error_message, long timeoutInSeconds)
-    {
+    protected String waitForElementAndGetAttribute(By by, String attribute, String error_message, long timeoutInSeconds) {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         return element.getAttribute(attribute);
     }
 
-    protected WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds)
-    {
+    protected WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.withMessage(error_message + "\n");
         return wait.until(
@@ -146,27 +134,23 @@ public class CoreTestCase {
         );
     }
 
-    protected WebElement waitForElementPresent(By by, String error_message)
-    {
+    protected WebElement waitForElementPresent(By by, String error_message) {
         return waitForElementPresent(by, error_message, 5);
     }
 
-    protected WebElement waitForElementAndClick(By by, String error_message, long timeoutInSeconds)
-    {
+    protected WebElement waitForElementAndClick(By by, String error_message, long timeoutInSeconds) {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         element.click();
         return element;
     }
 
-    protected WebElement waitForElementAndSendKeys(By by, String value, String error_message, long timeoutInSeconds)
-    {
+    protected WebElement waitForElementAndSendKeys(By by, String value, String error_message, long timeoutInSeconds) {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         element.sendKeys(value);
         return element;
     }
 
-    protected boolean waitForElementNotPresent(By by, String error_message, long timeoutInSeconds)
-    {
+    protected boolean waitForElementNotPresent(By by, String error_message, long timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.withMessage(error_message + "\n");
         return wait.until(
@@ -174,8 +158,7 @@ public class CoreTestCase {
         );
     }
 
-    protected WebElement waitForElementAndClear(By by, String error_message, long timeoutInSeconds)
-    {
+    protected WebElement waitForElementAndClear(By by, String error_message, long timeoutInSeconds) {
         WebElement element = waitForElementPresent(by, error_message, timeoutInSeconds);
         element.clear();
         return element;
