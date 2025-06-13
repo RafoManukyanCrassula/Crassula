@@ -59,7 +59,7 @@ abstract public class CurrencyExchangePageObject extends MainPageObject
             FEE_DETAILS_EXCHANGE_FEE_VALUE,
             FEE_DETAILS_TOTAL_AMOUNT_VALUE,
             UNAVAILABLE_CURRENCY_PAIR_ERROR,
-            UNI_CURRENCY_OPTION;  // Добавляем эту константу
+            UNI_CURRENCY_OPTION;
 
     public CurrencyExchangePageObject(AppiumDriver driver)
     {
