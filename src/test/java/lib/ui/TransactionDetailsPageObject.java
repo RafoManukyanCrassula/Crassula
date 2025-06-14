@@ -3,7 +3,6 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import lib.ui.factories.TransactionDetailsPageObjectFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
 import java.util.Arrays;
 import java.util.List;
 

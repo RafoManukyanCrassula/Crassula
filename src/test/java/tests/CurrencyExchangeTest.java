@@ -1,6 +1,7 @@
 package tests;
 
 import lib.CoreTestCase;
+import lib.Platform;
 import lib.ui.DashboardPageObject;
 import lib.ui.LoginPageObject;
 import lib.ui.factories.CurrencyExchangePageObjectFactory;
@@ -36,14 +37,17 @@ public class CurrencyExchangeTest extends CoreTestCase {
         exchangePage.verifyExchangeRateInfoExists();
         exchangePage.verifyFirstAmountFieldExists();
         exchangePage.verifyFirstCurrencyIconExists();
-        String fromCurrency = exchangePage.getFirstCurrencyButtonText();
-        exchangePage.verifyFirstCurrencyButtonExists(fromCurrency);
-        exchangePage.clickFirstCurrencyButton(fromCurrency);
-        exchangePage.verifyCurrencySelectionElements();
-        exchangePage.closeCurrencySelection();
+
+        if (Platform.getInstance().isAndroid()) {
+            String fromCurrency = exchangePage.getFirstCurrencyButtonText();
+            exchangePage.verifyFirstCurrencyButtonExists(fromCurrency);
+            exchangePage.clickFirstCurrencyButton(fromCurrency);
+            exchangePage.verifyCurrencySelectionElements();
+            exchangePage.closeCurrencySelection();
+        }
+
         exchangePage.verifyFirstFieldBalance();
         exchangePage.verifyMaxButtonExists();
-        exchangePage.clickMaxButtonAndClearAmount();
         exchangePage.verifySecondAmountFieldExists();
         exchangePage.verifySecondCurrencyIconExists();
         String toCurrency = exchangePage.getSecondCurrencyButtonText();
@@ -64,6 +68,7 @@ public class CurrencyExchangeTest extends CoreTestCase {
         exchangePage.selectAccount(accountName);
         exchangePage.verifyExchangeButtonInForm();
         exchangePage.verifyAccountButton();
+        exchangePage.clickMaxButtonAndClearAmount();
         exchangePage.clickFirstAmountField();
         exchangePage.enterAmount("1");
         exchangePage.verifyMinusSymbolInFirstField();

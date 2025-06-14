@@ -10,7 +10,6 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,8 +17,6 @@ import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public abstract class MainPageObject {
@@ -28,12 +25,6 @@ public abstract class MainPageObject {
 
     public MainPageObject(AppiumDriver driver) {
         this.driver = driver;
-    }
-
-    public void assertElementHasText(By by, String expected_text, String error_message) {
-        WebElement element = waitForElementPresent(by, error_message, 10);
-        String actual_text = element.getAttribute("text");
-        assertEquals(expected_text, actual_text, error_message);
     }
 
     public WebElement waitForElementPresent(By by, String errorMessage, long timeoutInSeconds) {
@@ -97,6 +88,43 @@ public abstract class MainPageObject {
         return elementY > 0 && elementY < screenHeight;
     }
 
+    public int getAmountOfElements(String locator) {
+        By by = getLocatorByString(locator);
+        List<WebElement> elements = driver.findElements(by);
+        return elements.size();
+    }
+
+    public void assertElementNotPresent(String locator, String errorMessage) {
+        int amountOfElements = getAmountOfElements(locator);
+        if (amountOfElements > 0) {
+            String defaultMessage = "An element '" + locator + "' supposed to be not present";
+            throw new AssertionError(defaultMessage + " " + errorMessage);
+        }
+    }
+
+    private static By getLocatorByString(String locator_with_type) {
+        if (locator_with_type == null) {
+            throw new IllegalArgumentException("Locator with type cannot be null.");
+        }
+        String[] exploded_locator = locator_with_type.split(":", 2);
+
+        String by_type = exploded_locator[0];
+        String locator = exploded_locator[1];
+
+        if (by_type.equals("xpath")) {
+            return By.xpath(locator);
+        } else if (by_type.equals("id")) {
+            return By.id(locator);
+        } else {
+            throw new IllegalArgumentException("Cannot get type of locator. Locator: " + locator_with_type);
+        }
+    }
+
+    public String waitForElementAndGetAttribute(String locator, String attribute, String errorMessage, long timeoutInSeconds) {
+        WebElement element = waitForElementPresent(locator, errorMessage, timeoutInSeconds);
+        return element.getAttribute(attribute);
+    }
+
     public void swipeElementToLeft(String locator, String errorMessage) {
         WebElement element = waitForElementPresent(locator, errorMessage, 10);
 
@@ -130,35 +158,6 @@ public abstract class MainPageObject {
         }
     }
 
-    public int getAmountOfElements(String locator) {
-        By by = getLocatorByString(locator);
-        List<WebElement> elements = driver.findElements(by);
-        return elements.size();
-    }
-
-    public void assertElementNotPresent(String locator, String errorMessage) {
-        int amountOfElements = getAmountOfElements(locator);
-        if (amountOfElements > 0) {
-            String defaultMessage = "An element '" + locator + "' supposed to be not present";
-            throw new AssertionError(defaultMessage + " " + errorMessage);
-        }
-    }
-
-    private static By getLocatorByString(String locator_with_type) {
-        String[] exploded_locator = locator_with_type.split(":", 2);
-
-        String by_type = exploded_locator[0];
-        String locator = exploded_locator[1];
-
-        if (by_type.equals("xpath")) {
-            return By.xpath(locator);
-        } else if (by_type.equals("id")) {
-            return By.id(locator);
-        } else {
-            throw new IllegalArgumentException("Cannot get type of locator. Locator: " + locator_with_type);
-        }
-    }
-
     public String takeScreenshot(String name) {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
@@ -182,10 +181,5 @@ public abstract class MainPageObject {
             System.out.println("Something went wrong while taking screenshot: " + e.getMessage());
         }
         return bytes;
-    }
-
-    public String waitForElementAndGetAttribute(String locator, String attribute, String errorMessage, long timeoutInSeconds) {
-        WebElement element = waitForElementPresent(locator, errorMessage, timeoutInSeconds);
-        return element.getAttribute(attribute);
     }
 }

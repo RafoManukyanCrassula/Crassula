@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CurrencyExchangeTest" time="40.699" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.CurrencyExchangeTest" time="76.373" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AM"/>
     <property name="sun.boot.library.path" value="/Users/rafomanukyan/Library/Java/JavaVirtualMachines/openjdk-24.0.1/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250613220949202_3.jar /Users/rafomanukyan/Desktop/Crassula/target/surefire 2025-06-13T22-09-49_145-jvmRun1 surefire-20250613220949202_1tmp surefire_0-20250613220949202_2tmp"/>
+    <property name="sun.java.command" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250614202408684_3.jar /Users/rafomanukyan/Desktop/Crassula/target/surefire 2025-06-14T20-24-08_635-jvmRun1 surefire-20250614202408684_1tmp surefire_0-20250614202408684_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="CurrencyExchangeTest#testCurrencyExchange"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250613220949202_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/rafomanukyan/Desktop/Crassula/target/surefire/surefirebooter-20250614202408684_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -59,15 +59,59 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testCurrencyExchange" classname="tests.CurrencyExchangeTest" time="40.681">
-    <error message="Cannot invoke &quot;String.split(String, int)&quot; because &quot;locator_with_type&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "String.split(String, int)" because "locator_with_type" is null
-	at lib.ui.MainPageObject.getLocatorByString(MainPageObject.java:148)
-	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:46)
-	at lib.ui.CurrencyExchangePageObject.getFirstCurrencyButtonText(CurrencyExchangePageObject.java:129)
-	at tests.CurrencyExchangeTest.testCurrencyExchange(CurrencyExchangeTest.java:39)
+  <testcase name="testCurrencyExchange" classname="tests.CurrencyExchangeTest" time="76.351">
+    <error message="Expected condition failed: From Account value not found&#10; (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
+Expected condition failed: From Account value not found
+ (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:42)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:47)
+	at lib.ui.CurrencyExchangePageObject.verifyConfirmationDetails(CurrencyExchangePageObject.java:514)
+	at tests.CurrencyExchangeTest.testCurrencyExchange(CurrencyExchangeTest.java:84)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.2', java.version: '24.0.1'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [f8700cd2-f654-4942-bd61-d80218207fdb, findElement {value=(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[1], using=xpath}]
+Capabilities {appium:app: /Users/rafomanukyan/Desktop..., appium:autoAcceptAlerts: true, appium:autoAcceptAlertsDelay: 5000, appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: iPhone 16 Plus, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 18.4, appium:takesScreenshot: true, appium:udid: 901038E9-9E45-4E55-9D1F-1B5..., appium:webStorageEnabled: false, platformName: IOS}
+Session ID: f8700cd2-f654-4942-bd61-d80218207fdb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 7 more
 ]]></error>
+    <system-out><![CDATA[Text by getText(): 992,21
+Text by value attribute: 992,21
+Text by label attribute: 
+Text to clear: 992,21
+Method 1 (JavaScript) failed: {"value":{"error":"unknown method","message":"Method is not implemented","stacktrace":"NotImplementedError: Method is not implemented\n    at XCUITestDriver.execute (/Users/rafomanukyan/.appium/node_modules/appium-xcuitest-driver/lib/commands/execute.js:123:13)\n    at runCommandPromise (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/driver.ts:116:20)\n    at /Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/async-lock/lib/index.js:171:12\n    at AsyncLock._promiseTry (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/async-lock/lib/index.js:306:31)\n    at exec (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/async-lock/lib/index.js:170:9)\n    at AsyncLock.acquire (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/async-lock/lib/index.js:189:3)\n    at XCUITestDriver.executeCommand (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/@appium/base-driver/lib/basedriver/driver.ts:160:39)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at XCUITestDriver.executeCommand (/Users/rafomanukyan/.appium/node_modules/appium-xcuitest-driver/lib/driver.js:1093:12)\n    at defaultBehavior (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/lib/appium.js:769:14)\n    at AppiumDriver.executeWrappedCommand (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/lib/appium.js:882:16)\n    at AppiumDriver.executeCommand (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/lib/appium.js:781:17)\n    at asyncHandler (/Users/rafomanukyan/.npm-global/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.js:389:19)"}}
+Command duration or timeout: 6 milliseconds
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.2', java.version: '24.0.1'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [f8700cd2-f654-4942-bd61-d80218207fdb, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=F0010000-0000-0000-9BCB-000000000000}], script=arguments[0].value = '';}]
+Capabilities {appium:app: /Users/rafomanukyan/Desktop..., appium:autoAcceptAlerts: true, appium:autoAcceptAlertsDelay: 5000, appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: iPhone 16 Plus, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 18.4, appium:takesScreenshot: true, appium:udid: 901038E9-9E45-4E55-9D1F-1B5..., appium:webStorageEnabled: false, platformName: IOS}
+Session ID: f8700cd2-f654-4942-bd61-d80218207fdb
+Successfully cleared using WebDriver clear()
+Modal closed successfully on iOS
+]]></system-out>
   </testcase>
 </testsuite>

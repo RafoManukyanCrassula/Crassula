@@ -58,6 +58,13 @@ public class AndroidCurrencyExchangePageObject extends CurrencyExchangePageObjec
         FEE_DETAILS_TOTAL_AMOUNT_VALUE = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]";
         UNAVAILABLE_CURRENCY_PAIR_ERROR = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelBalance' and @text='The exchange of these currency pairs GBP-UNI is currently unavailable']";
         UNI_CURRENCY_OPTION = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListSubTitle' and @text='UNI']";
+        CURRENCY_LIST_ICON = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/currencyLetter'])[1]";
+        CURRENCY_LIST_FULL_NAME = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListTitle']";
+        CURRENCY_LIST_SHORT_NAME = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListSubTitle']";
+        CURRENCY_LIST_AMOUNT = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListAmount']";
+        CLOSE_CURRENCY_SELECTION = "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/currencyLetter'])[1]";
+        ACCOUNT_MODAL_NAME = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListTitle']";
+        ACCOUNT_MODAL_SUBTITLE = "xpath://android.widget.TextView[@resource-id='com.crassula.demo:id/labelListSubTitle']";
     }
 
     public AndroidCurrencyExchangePageObject(AppiumDriver driver) {
