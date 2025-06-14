@@ -4,11 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import lib.Platform;
 import lib.ui.factories.ValidationHelperObjectFactory;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.By;
-import java.time.Duration;
-import java.util.Arrays;
 
 abstract public class CurrencyExchangePageObject extends MainPageObject {
     protected static String
