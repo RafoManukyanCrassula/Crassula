@@ -3,9 +3,13 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import lib.Platform;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +19,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -53,6 +58,165 @@ public abstract class MainPageObject {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.withMessage(errorMessage + "\n");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+    }
+
+    protected void clearInputFieldFromLeft(WebElement field) {
+        field.click();
+
+        String textByGetText = field.getText();
+        String textByValue = field.getAttribute("value");
+        String textByLabel = field.getAttribute("label");
+
+        System.out.println("Text by getText(): " + textByGetText);
+        System.out.println("Text by value attribute: " + textByValue);
+        System.out.println("Text by label attribute: " + textByLabel);
+
+        String actualText = textByValue != null && !textByValue.isEmpty() ? textByValue : textByGetText;
+        if (actualText == null || actualText.isEmpty()) {
+            actualText = textByLabel;
+        }
+
+        if (actualText == null || actualText.isEmpty()) {
+            System.out.println("Field is already empty.");
+            return;
+        }
+
+        System.out.println("Text to clear: " + actualText);
+
+        try {
+            JavascriptExecutor js = driver;
+            js.executeScript("arguments[0].value = '';", field);
+
+            js.executeScript("arguments[0].dispatchEvent(new Event('input', { bubbles: true }));", field);
+            js.executeScript("arguments[0].dispatchEvent(new Event('change', { bubbles: true }));", field);
+
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            String checkText = field.getAttribute("value");
+            if (checkText == null) checkText = field.getText();
+
+            if (checkText == null || checkText.isEmpty()) {
+                System.out.println("Successfully cleared using JavaScript");
+                return;
+            }
+        } catch (Exception e) {
+            System.out.println("Method 1 (JavaScript) failed: " + e.getMessage());
+        }
+
+        try {
+            field.click();
+            field.sendKeys(Keys.chord(Keys.COMMAND, "a"));
+            field.sendKeys(Keys.DELETE);
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            String checkText = field.getAttribute("value");
+            if (checkText == null) checkText = field.getText();
+
+            if (checkText == null || checkText.isEmpty()) {
+                return;
+            }
+        } catch (Exception e) {
+            System.out.println("Method 2 (Select All + Delete) failed: " + e.getMessage());
+        }
+
+        try {
+            field.clear();
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            String checkText = field.getAttribute("value");
+            if (checkText == null) checkText = field.getText();
+
+            if (checkText == null || checkText.isEmpty()) {
+                return;
+            }
+        } catch (Exception e) {
+            System.out.println("Method 3 (WebDriver clear) failed: " + e.getMessage());
+        }
+
+        try {
+            field.click();
+            field.sendKeys(Keys.chord(Keys.COMMAND, Keys.RIGHT));
+
+            int length = actualText.length();
+            for (int i = 0; i < length; i++) {
+                field.sendKeys(Keys.BACK_SPACE);
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            String checkText = field.getAttribute("value");
+            if (checkText == null) checkText = field.getText();
+
+            if (checkText == null || checkText.isEmpty()) {
+                return;
+            }
+        } catch (Exception e) {
+            System.out.println("Method 4 (Backspace from end) failed: " + e.getMessage());
+        }
+
+        String finalTextByValue = field.getAttribute("value");
+        String finalTextByGetText = field.getText();
+        String finalTextByLabel = field.getAttribute("label");
+
+        String finalText = finalTextByValue != null && !finalTextByValue.isEmpty() ? finalTextByValue : finalTextByGetText;
+        if (finalText == null || finalText.isEmpty()) {
+            finalText = finalTextByLabel;
+        }
+
+        assert (finalText == null || finalText.isEmpty()) : "The input field is not empty after clearing. Final value: " + finalText;
+    }
+
+    protected void clickOutsideModal() {
+        if (Platform.getInstance().isIOS()) {
+            try {
+                Dimension size = driver.manage().window().getSize();
+                int centerX = size.width / 2;
+                int centerY = size.height / 2;
+
+                PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+                Sequence tap = new Sequence(finger, 1);
+
+                tap.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), centerX, centerY));
+                tap.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+                tap.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+                driver.perform(Arrays.asList(tap));
+                Thread.sleep(1000);
+
+            } catch (Exception e) {
+                System.out.println("Failed to close modal with center tap: " + e.getMessage());
+
+                try {
+                    Dimension size = driver.manage().window().getSize();
+                    int centerX = size.width / 2;
+                    int centerY = size.height / 2;
+
+                    Actions actions = new Actions(driver);
+                    actions.moveToLocation(centerX, centerY).click().perform();
+                    Thread.sleep(1000);
+
+                } catch (Exception ex) {
+                    System.out.println("Alternative center click also failed: " + ex.getMessage());
+                }
+            }
+        }
     }
 
     public void swipeUpQuick() {
