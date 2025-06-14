@@ -487,9 +487,7 @@ abstract public class CurrencyExchangePageObject extends MainPageObject {
                 "Total amount value not found", 10);
         String totalAmountText = totalAmountElement.getAttribute(textAttribute);
 
-        boolean accountMatches = fromAccountText.contains(accountNumber) ||
-                fromAccountText.equals(accountNumber + " (GBP)") ||
-                fromAccountText.equals(accountNumber);
+        boolean accountMatches = fromAccountText.contains(accountNumber) || fromAccountText.equals(accountNumber + " (GBP)");
         assert accountMatches :
                 String.format("From Account is incorrect. Expected to contain: %s, but got: %s", accountNumber, fromAccountText);
 
