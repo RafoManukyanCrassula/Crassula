@@ -12,25 +12,37 @@ import lib.ui.TransactionDetailsPageObject;
 import org.junit.jupiter.api.Test;
 
 public class CurrencyExchangeTest extends CoreTestCase {
+    
+    private static final String TEST_EMAIL = "client@crassula.io";
+    private static final String TEST_PASSWORD = "Qwerty123";
+    
     @Test
     public void testCurrencyExchange() {
+        performLoginAndNavigateToExchange();
+    
+        verifyAndConfigureExchangeFields();
+    
+        String accountName = fillExchangeForm();
+    
+        executeExchangeAndVerifyResult(accountName);
+    }
+
+    private void performLoginAndNavigateToExchange() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+    
         loginPage.verifyLoginButtonExists();
         loginPage.clickLoginButton();
-        loginPage.performLogin("client@crassula.io", "Qwerty123");
+        loginPage.performLogin(TEST_EMAIL, TEST_PASSWORD);
         loginPage.createPasscode();
+    
         DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
         dashboardPage.waitForDashboardToLoad();
         dashboardPage.checkTransactionsTextPresent();
+    }
 
+    private void verifyAndConfigureExchangeFields() {
         CurrencyExchangePageObject exchangePage = CurrencyExchangePageObjectFactory.get(driver);
+
         exchangePage.verifyExchangeButtonExists();
         exchangePage.clickExchangeButton();
         exchangePage.verifyExchangePageTitle();
@@ -50,48 +62,65 @@ public class CurrencyExchangeTest extends CoreTestCase {
         exchangePage.verifyMaxButtonExists();
         exchangePage.verifySecondAmountFieldExists();
         exchangePage.verifySecondCurrencyIconExists();
+
         String toCurrency = exchangePage.getSecondCurrencyButtonText();
         exchangePage.verifySecondCurrencyButtonExists(toCurrency);
         exchangePage.clickSecondCurrencyButton(toCurrency);
         exchangePage.verifySecondCurrencySelectionElements(toCurrency);
         exchangePage.closeSecondCurrencySelection();
         exchangePage.verifySecondFieldBalance();
+
         exchangePage.verifyFeeInfoExists();
         exchangePage.verifyAccountToLabelExists();
         exchangePage.verifyAccountSelectionField();
         exchangePage.verifyAccountName();
         exchangePage.verifyAccountAmount();
+    }
+
+    private String fillExchangeForm() {
+        CurrencyExchangePageObject exchangePage = CurrencyExchangePageObjectFactory.get(driver);
+
         exchangePage.clickAccountSelection();
         exchangePage.verifyAccountSelectionModal();
         String accountName = exchangePage.getAccountName();
-        String accountNumber = exchangePage.getAccountNumberFromModal();
         exchangePage.selectAccount(accountName);
         exchangePage.verifyExchangeButtonInForm();
         exchangePage.verifyAccountButton();
+
         exchangePage.clickMaxButtonAndClearAmount();
         exchangePage.clickFirstAmountField();
         exchangePage.enterAmount("1");
         exchangePage.verifyMinusSymbolInFirstField();
         exchangePage.verifyPlusSymbolInSecondField();
+
         exchangePage.clickFeeInfo();
         exchangePage.verifyFeeDetailsModal("1");
         exchangePage.closeFeeDetailsModal();
-        exchangePage.getExchangeRate();
-        String exchangeRate;
+        
+        return accountName;
+    }
+
+    private void executeExchangeAndVerifyResult(String accountName) {
+        CurrencyExchangePageObject exchangePage = CurrencyExchangePageObjectFactory.get(driver);
+
         exchangePage.clickExchangeButtonInForm();
         exchangePage.verifyConfirmExchangeTitle();
-        exchangeRate = exchangePage.getExchangeRate();
-        exchangePage.verifyConfirmationDetails("1", accountNumber, exchangeRate);
+        String exchangeRate = exchangePage.getExchangeRate();
+        
+        exchangePage.verifyConfirmationDetails("1", accountName, exchangeRate);
         exchangePage.clickConfirmExchange();
         exchangePage.verifySuccessTitle();
         exchangePage.verifySuccessMessage();
         exchangePage.verifyExchangeAmount();
         exchangePage.verifyTransactionDetailsTitle();
+
         exchangePage.clickTransactionDetails();
         TransactionDetailsPageObject transactionDetailsPage = TransactionDetailsPageObject.get(driver);
         transactionDetailsPage.verifyTransactionDetailsContent();
         transactionDetailsPage.clickBackButton();
+
         exchangePage.clickBackToHome();
+        DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
         dashboardPage.verifyTransactionOnDashboard();
     }
 
@@ -99,15 +128,9 @@ public class CurrencyExchangeTest extends CoreTestCase {
     public void testInsufficientFundsValidation() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         loginPage.verifyLoginButtonExists();
         loginPage.clickLoginButton();
-        loginPage.performLogin("client@crassula.io", "Qwerty123");
+        loginPage.performLogin(TEST_EMAIL, TEST_PASSWORD);
         loginPage.createPasscode();
         DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
         dashboardPage.waitForDashboardToLoad();
@@ -143,15 +166,9 @@ public class CurrencyExchangeTest extends CoreTestCase {
     public void testUnavailableCurrencyPairValidation() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         loginPage.verifyLoginButtonExists();
         loginPage.clickLoginButton();
-        loginPage.performLogin("client@crassula.io", "Qwerty123");
+        loginPage.performLogin(TEST_EMAIL, TEST_PASSWORD);
         loginPage.createPasscode();
         DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
         dashboardPage.waitForDashboardToLoad();

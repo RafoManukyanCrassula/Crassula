@@ -14,7 +14,6 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -60,6 +59,14 @@ public abstract class MainPageObject {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.withMessage(errorMessage + "\n");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+    }
+
+    protected void clearInputField(WebElement field) {
+        field.click();
+        int length = field.getText().length();
+        for (int i = 0; i < length; i++) {
+            field.sendKeys("\b");
+        }
     }
 
     protected void clearInputFieldFromLeft(WebElement field) {

@@ -1,4 +1,48 @@
 -------------------------------------------------------------------------------
 Test set: tests.LoginTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.03 s -- in tests.LoginTests
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in tests.LoginTests
+tests.LoginTests.testInvalidEmailValidation -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+	at lib.Platform.getDriver(Platform.java:36)
+	at lib.CoreTestCase.setUp(CoreTestCase.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.quit()" because "this.driver" is null
+		at lib.CoreTestCase.tearDown(CoreTestCase.java:32)
+		... 3 more
+
+tests.LoginTests.testLogin -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+	at lib.Platform.getDriver(Platform.java:36)
+	at lib.CoreTestCase.setUp(CoreTestCase.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.quit()" because "this.driver" is null
+		at lib.CoreTestCase.tearDown(CoreTestCase.java:32)
+		... 3 more
+
+tests.LoginTests.testInvalidCredentialsAlert -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+	at lib.Platform.getDriver(Platform.java:36)
+	at lib.CoreTestCase.setUp(CoreTestCase.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.quit()" because "this.driver" is null
+		at lib.CoreTestCase.tearDown(CoreTestCase.java:32)
+		... 3 more
+
+tests.LoginTests.testBlankFieldsValidation -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+	at lib.Platform.getDriver(Platform.java:36)
+	at lib.CoreTestCase.setUp(CoreTestCase.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.quit()" because "this.driver" is null
+		at lib.CoreTestCase.tearDown(CoreTestCase.java:32)
+		... 3 more
+
