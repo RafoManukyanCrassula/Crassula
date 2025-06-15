@@ -2,7 +2,6 @@ package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginPageObject extends MainPageObject {
@@ -108,7 +107,7 @@ public class LoginPageObject extends MainPageObject {
             this.waitForElementAndClick(PASSCODE_BUTTON_1, "Cannot find button '1'", 5);
         }
 
-        this.waitForElementPresent(PASSCODE_TITLE, "Passcode confirmation screen not ready", 10);
+        this.waitForElementPresent(PASSCODE_BUTTON_1, "Button '1' not available for confirmation", 10);
 
         for (int i = 0; i < 4; i++) {
             this.waitForElementAndClick(PASSCODE_BUTTON_1, "Cannot find button '1'", 5);

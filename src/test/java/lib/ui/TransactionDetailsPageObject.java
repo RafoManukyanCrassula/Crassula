@@ -1,6 +1,7 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import lib.Platform;
 import lib.ui.factories.TransactionDetailsPageObjectFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.util.Arrays;
@@ -40,12 +41,14 @@ abstract public class TransactionDetailsPageObject extends MainPageObject {
                 "Transaction status not valid or not found",
                 10
         );
+        
         String status = this.waitForElementAndGetAttribute(
                 TRANSACTION_STATUS_VALUE,
-                "text",
+                Platform.getInstance().isAndroid() ? "text" : "name",
                 "Can't get text of transaction status",
                 10
         );
+        
         List<String> validStatuses = Arrays.asList("Pending", "Draft", "Processing", "Rejected", "Cancelled", "Failed", "Completed");
         if (!validStatuses.contains(status)) {
             throw new AssertionError("Transaction status is not valid. Found: " + status + ". Valid statuses: " + validStatuses);

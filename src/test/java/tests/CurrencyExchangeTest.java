@@ -107,7 +107,7 @@ public class CurrencyExchangeTest extends CoreTestCase {
         exchangePage.verifyConfirmExchangeTitle();
         String exchangeRate = exchangePage.getExchangeRate();
         
-        exchangePage.verifyConfirmationDetails("1", accountName, exchangeRate);
+        exchangePage.verifyConfirmationDetails("1", exchangeRate);
         exchangePage.clickConfirmExchange();
         exchangePage.verifySuccessTitle();
         exchangePage.verifySuccessMessage();

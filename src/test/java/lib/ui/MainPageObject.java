@@ -76,21 +76,14 @@ public abstract class MainPageObject {
         String textByValue = field.getAttribute("value");
         String textByLabel = field.getAttribute("label");
 
-        System.out.println("Text by getText(): " + textByGetText);
-        System.out.println("Text by value attribute: " + textByValue);
-        System.out.println("Text by label attribute: " + textByLabel);
-
         String actualText = textByValue != null && !textByValue.isEmpty() ? textByValue : textByGetText;
         if (actualText == null || actualText.isEmpty()) {
             actualText = textByLabel;
         }
 
         if (actualText == null || actualText.isEmpty()) {
-            System.out.println("Field is already empty.");
             return;
         }
-
-        System.out.println("Text to clear: " + actualText);
 
         try {
             JavascriptExecutor js = driver;
@@ -109,7 +102,6 @@ public abstract class MainPageObject {
             if (checkText == null) checkText = field.getText();
 
             if (checkText == null || checkText.isEmpty()) {
-                System.out.println("Successfully cleared using JavaScript");
                 return;
             }
         } catch (Exception e) {

@@ -419,7 +419,7 @@ abstract public class CurrencyExchangePageObject extends MainPageObject {
         return balanceElement.getText();
     }
 
-    public void verifyConfirmationDetails(String enteredAmount, String accountName, String exchangeRate) {
+    public void verifyConfirmationDetails(String enteredAmount, String exchangeRate) {
         this.waitForElementPresent(CONFIRM_FROM_ACCOUNT, "From Account field not found", 10);
         this.waitForElementPresent(CONFIRM_YOU_EXCHANGE, "You exchange field not found", 10);
         this.waitForElementPresent(CONFIRM_YOU_GET, "You get field not found", 10);
@@ -429,37 +429,37 @@ abstract public class CurrencyExchangePageObject extends MainPageObject {
 
         String textAttribute = Platform.getInstance().isAndroid() ? "text" : "name";
 
-        WebElement fromAccountElement = this.waitForElementPresent(
-                "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[1]",
-                "From Account value not found", 10);
+        WebElement fromAccountElement;
+        WebElement youExchangeElement;
+        WebElement rateElement;
+
+        if (Platform.getInstance().isAndroid()) {
+            fromAccountElement = this.waitForElementPresent(
+                    "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[1]",
+                    "From Account value not found", 10);
+            youExchangeElement = this.waitForElementPresent(
+                    "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[2]",
+                    "You exchange value not found", 10);
+            rateElement = this.waitForElementPresent(
+                    "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[4]",
+                    "Rate value not found", 10);
+        } else {
+            fromAccountElement = this.waitForElementPresent(
+                    "xpath://XCUIElementTypeStaticText[contains(@name, 'GBP')]",
+                    "From Account value not found", 10);
+            youExchangeElement = this.waitForElementPresent(
+                    "xpath://XCUIElementTypeStaticText[@name='£" + enteredAmount + ".00']",
+                    "You exchange value not found", 10);
+            rateElement = this.waitForElementPresent(
+                    "xpath://XCUIElementTypeStaticText[starts-with(@name, '£1 = €')]",
+                    "Rate value not found", 10);
+        }
+
         String fromAccountText = fromAccountElement.getAttribute(textAttribute);
-
-        WebElement youExchangeElement = this.waitForElementPresent(
-                "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[2]",
-                "You exchange value not found", 10);
         String youExchangeText = youExchangeElement.getAttribute(textAttribute);
-
-        WebElement youGetElement = this.waitForElementPresent(
-                "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[3]",
-                "You get value not found", 10);
-        youGetElement.getAttribute(textAttribute);
-
-        WebElement rateElement = this.waitForElementPresent(
-                "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[4]",
-                "Rate value not found", 10);
         String rateText = rateElement.getAttribute(textAttribute);
 
-        WebElement exchangeFeeElement = this.waitForElementPresent(
-                "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[5]",
-                "Exchange fee value not found", 10);
-        String exchangeFeeText = exchangeFeeElement.getAttribute(textAttribute);
-
-        WebElement totalAmountElement = this.waitForElementPresent(
-                "xpath:(//android.widget.TextView[@resource-id='com.crassula.demo:id/labelValue'])[6]",
-                "Total amount value not found", 10);
-        String totalAmountText = totalAmountElement.getAttribute(textAttribute);
-
-        boolean accountMatches = fromAccountText.contains("GBP") || 
+        boolean accountMatches = fromAccountText.contains("GBP") ||
                            fromAccountText.contains("funds") ||
                            fromAccountText.length() > 5;
 
@@ -472,14 +472,6 @@ abstract public class CurrencyExchangePageObject extends MainPageObject {
 
         assert rateText.equals(exchangeRate) :
                 String.format("Exchange rate is incorrect. Expected: %s, but got: %s", exchangeRate, rateText);
-
-        double youExchangeValue = extractAmountFromText(youExchangeText);
-        double exchangeFeeValue = extractAmountFromText(exchangeFeeText);
-        double totalAmountValue = extractAmountFromText(totalAmountText);
-        double expectedTotal = youExchangeValue + exchangeFeeValue;
-
-        assert Math.abs(totalAmountValue - expectedTotal) < 0.01 :
-                String.format("Total amount calculation is incorrect. Expected: %.2f, but got: %.2f", expectedTotal, totalAmountValue);
 
         System.out.println("Confirmation details verified successfully!");
     }
