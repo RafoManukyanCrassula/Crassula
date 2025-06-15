@@ -8,22 +8,22 @@ import lib.ui.LoginPageObject;
 import org.junit.jupiter.api.Test;
 
 public class LoginTests extends CoreTestCase {
+    
+    private static final String VALID_EMAIL = "client@crassula.io";
+    private static final String VALID_PASSWORD = "Qwerty123";
+    private static final String INVALID_EMAIL = "random@mail.ru";
+    private static final String INVALID_PASSWORD = "random";
+    private static final String INCOMPLETE_EMAIL = "random";
+    
     @Test
     public void testLogin() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException
-                e) {
-            e.printStackTrace();
-        }
 
         loginPage.verifyLoginButtonExists();
         loginPage.verifyLoginButtonText("Log in");
         loginPage.clickLoginButton();
         loginPage.verifyLoginPageElements();
-        loginPage.performLogin("client@crassula.io", "Qwerty123");
+        loginPage.performLogin(VALID_EMAIL, VALID_PASSWORD);
         loginPage.createPasscode();
 
         DashboardPageObject dashboardPage = DashboardPageObjectFactory.get(driver);
@@ -35,29 +35,11 @@ public class LoginTests extends CoreTestCase {
     public void testBlankFieldsValidation() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         loginPage.clickLoginButton();
         loginPage.clickEmailField();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException _) {
-        }
         loginPage.clickPasswordField();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException _) {
-        }
         loginPage.verifyValidationErrorMustBePresent("The value should not be blank");
         loginPage.clickEmailField();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException _) {
-        }
         loginPage.verifyValidationErrorMustBePresent("The value should not be blank");
     }
 
@@ -65,15 +47,8 @@ public class LoginTests extends CoreTestCase {
     public void testInvalidEmailValidation() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         loginPage.clickLoginButton();
-        String longEmail = "random";
-        loginPage.enterInvalidEmail(longEmail);
+        loginPage.enterInvalidEmail(INCOMPLETE_EMAIL);
         loginPage.verifyValidationErrorMustBePresent("Email address is not valid");
     }
 
@@ -82,8 +57,8 @@ public class LoginTests extends CoreTestCase {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);
 
         loginPage.clickLoginButton();
-        loginPage.enterEmail("random@mail.ru");
-        loginPage.enterPassword("random");
+        loginPage.enterEmail(INVALID_EMAIL);
+        loginPage.enterPassword(INVALID_PASSWORD);
         loginPage.clickContinueButton();
         loginPage.verifyWrongCredentialsAlert();
         loginPage.clickAlertOkButton();
