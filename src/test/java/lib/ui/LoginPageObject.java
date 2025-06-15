@@ -79,19 +79,11 @@ public class LoginPageObject extends MainPageObject {
 
     public void enterEmail(String email) {
         this.waitForElementAndClick(EMAIL_LABEL, "Cannot find and click email label", 5);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException _) {
-        }
         this.waitForElementAndSendKeys(USERNAME_FIELD, email, "Cannot find email input field", 5);
     }
 
     public void enterPassword(String password) {
         this.waitForElementAndClick(PASSWORD_LABEL, "Cannot find and click password label", 5);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException _) {
-        }
         this.waitForElementAndSendKeys(PASSWORD_FIELD, password, "Cannot find password input field", 5);
     }
 
@@ -116,10 +108,7 @@ public class LoginPageObject extends MainPageObject {
             this.waitForElementAndClick(PASSCODE_BUTTON_1, "Cannot find button '1'", 5);
         }
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException _) {
-        }
+        this.waitForElementPresent(PASSCODE_TITLE, "Passcode confirmation screen not ready", 10);
 
         for (int i = 0; i < 4; i++) {
             this.waitForElementAndClick(PASSCODE_BUTTON_1, "Cannot find button '1'", 5);
@@ -171,10 +160,6 @@ public class LoginPageObject extends MainPageObject {
 
     public void enterInvalidEmail(String invalidEmail) {
         this.waitForElementAndClick(EMAIL_LABEL, "Cannot find email label", 5);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException _) {
-        }
         this.waitForElementAndSendKeys(USERNAME_FIELD, invalidEmail, "Cannot find email input field", 5);
         clickPasswordField();
     }
