@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.CurrencyExchangeTestRunner" time="87.933" tests="4" errors="4" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/rafo/IdeaProjects/Crassula/target/test-classes:/Users/rafo/IdeaProjects/Crassula/target/classes:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-java/4.18.1/selenium-java-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-api/4.18.1/selenium-api-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.18.1/selenium-chrome-driver-4.18.1.jar:/Users/rafo/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.18.1/selenium-chromium-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-json/4.18.1/selenium-json-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.18.1/selenium-manager-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.18.1/selenium-devtools-v120-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v121/4.18.1/selenium-devtools-v121-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v122/4.18.1/selenium-devtools-v122-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.18.1/selenium-devtools-v85-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.18.1/selenium-edge-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.18.1/selenium-firefox-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-http/4.18.1/selenium-http-4.18.1.jar:/Users/rafo/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.18.1/selenium-ie-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.18.1/selenium-remote-driver-4.18.1.jar:/Users/rafo/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/rafo/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/rafo/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rafo/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/rafo/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/rafo/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/rafo/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/rafo/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.23.1-alpha/opentelemetry-semconv-1.23.1-alpha.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-api/1.35.0/opentelemetry-api-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-context/1.35.0/opentelemetry-context-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.35.0/opentelemetry-exporter-logging-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.35.0/opentelemetry-sdk-common-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.35.0/opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.35.0/opentelemetry-sdk-extension-autoconfigure-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.35.0-alpha/opentelemetry-api-events-1.35.0-alpha.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.35.0/opentelemetry-sdk-trace-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.35.0-alpha/opentelemetry-extension-incubator-1.35.0-alpha.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.35.0/opentelemetry-sdk-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.35.0/opentelemetry-sdk-metrics-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.35.0/opentelemetry-sdk-logs-1.35.0.jar:/Users/rafo/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-os/4.18.1/selenium-os-4.18.1.jar:/Users/rafo/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.18.1/selenium-safari-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.1/selenium-support-4.18.1.jar:/Users/rafo/.m2/repository/io/appium/java-client/9.0.0/java-client-9.0.0.jar:/Users/rafo/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/rafo/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/rafo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite/1.10.2/junit-platform-suite-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.2/junit-platform-suite-engine-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/Users/rafo/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/rafo/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/rafo/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/rafo/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/rafo/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/rafo/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/rafo/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/rafo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.0/cucumber-junit-platform-engine-7.14.0.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-junit/7.14.0/cucumber-junit-7.14.0.jar:/Users/rafo/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/rafo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Yerevan"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AM"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/24.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/rafo/IdeaProjects/Crassula/target/surefire/surefirebooter-20250618000236428_3.jar /Users/rafo/IdeaProjects/Crassula/target/surefire 2025-06-18T00-02-36_395-jvmRun1 surefire-20250618000236428_1tmp surefire_0-20250618000236428_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="CurrencyExchangeTestRunner"/>
+    <property name="surefire.test.class.path" value="/Users/rafo/IdeaProjects/Crassula/target/test-classes:/Users/rafo/IdeaProjects/Crassula/target/classes:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-java/4.18.1/selenium-java-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-api/4.18.1/selenium-api-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.18.1/selenium-chrome-driver-4.18.1.jar:/Users/rafo/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.18.1/selenium-chromium-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-json/4.18.1/selenium-json-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.18.1/selenium-manager-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v120/4.18.1/selenium-devtools-v120-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v121/4.18.1/selenium-devtools-v121-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v122/4.18.1/selenium-devtools-v122-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.18.1/selenium-devtools-v85-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.18.1/selenium-edge-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.18.1/selenium-firefox-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-http/4.18.1/selenium-http-4.18.1.jar:/Users/rafo/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.18.1/selenium-ie-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.18.1/selenium-remote-driver-4.18.1.jar:/Users/rafo/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/rafo/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/rafo/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rafo/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/rafo/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/rafo/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/rafo/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/rafo/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.23.1-alpha/opentelemetry-semconv-1.23.1-alpha.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-api/1.35.0/opentelemetry-api-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-context/1.35.0/opentelemetry-context-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.35.0/opentelemetry-exporter-logging-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.35.0/opentelemetry-sdk-common-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.35.0/opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.35.0/opentelemetry-sdk-extension-autoconfigure-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.35.0-alpha/opentelemetry-api-events-1.35.0-alpha.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.35.0/opentelemetry-sdk-trace-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.35.0-alpha/opentelemetry-extension-incubator-1.35.0-alpha.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.35.0/opentelemetry-sdk-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.35.0/opentelemetry-sdk-metrics-1.35.0.jar:/Users/rafo/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.35.0/opentelemetry-sdk-logs-1.35.0.jar:/Users/rafo/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-os/4.18.1/selenium-os-4.18.1.jar:/Users/rafo/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.18.1/selenium-safari-driver-4.18.1.jar:/Users/rafo/.m2/repository/org/seleniumhq/selenium/selenium-support/4.18.1/selenium-support-4.18.1.jar:/Users/rafo/.m2/repository/io/appium/java-client/9.0.0/java-client-9.0.0.jar:/Users/rafo/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/rafo/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/rafo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/rafo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite/1.10.2/junit-platform-suite-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.2/junit-platform-suite-api-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.2/junit-platform-suite-engine-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.2/junit-platform-suite-commons-1.10.2.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar:/Users/rafo/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/rafo/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/rafo/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/rafo/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/rafo/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/rafo/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/rafo/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/rafo/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/rafo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.14.0/cucumber-junit-platform-engine-7.14.0.jar:/Users/rafo/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/rafo/.m2/repository/io/cucumber/cucumber-junit/7.14.0/cucumber-junit-7.14.0.jar:/Users/rafo/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/rafo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/rafo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/24.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/rafo/IdeaProjects/Crassula"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/rafo/IdeaProjects/Crassula/target/surefire/surefirebooter-20250618000236428_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="24.0.1"/>
+    <property name="user.name" value="rafo"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/rafo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/fy/pt792pzd2590f_r43mdlxfbr0000gn/T/"/>
+    <property name="java.version" value="24.0.1"/>
+    <property name="user.dir" value="/Users/rafo/IdeaProjects/Crassula"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/rafo/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="24.0.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="Successful currency exchange" classname="Currency Exchange" time="7.983">
+    <error message="An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up&#10;Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;24.0.1&apos;&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Command: [a8b48080-94fa-4d2b-9be5-ca8e84f0d253, clickElement {id=00000000-0000-06f5-ffff-ffff00000069}]&#10;Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}&#10;Element: [[AndroidDriver:  on ANDROID (a8b48080-94fa-4d2b-9be5-ca8e84f0d253)] -&gt; id: com.crassula.demo:id/buttonSignIn]&#10;Session ID: a8b48080-94fa-4d2b-9be5-ca8e84f0d253" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [a8b48080-94fa-4d2b-9be5-ca8e84f0d253, clickElement {id=00000000-0000-06f5-ffff-ffff00000069}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (a8b48080-94fa-4d2b-9be5-ca8e84f0d253)] -> id: com.crassula.demo:id/buttonSignIn]
+Session ID: a8b48080-94fa-4d2b-9be5-ca8e84f0d253
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at lib.ui.MainPageObject.waitForElementAndClick(MainPageObject.java:49)
+	at lib.ui.LoginPageObject.clickContinueButton(LoginPageObject.java:96)
+	at lib.ui.LoginPageObject.performLogin(LoginPageObject.java:92)
+	at steps.CurrencyExchangeSteps.i_enter_email_and_password(CurrencyExchangeSteps.java:38)
+	at ✽.I enter email "client@crassula.io" and password "Qwerty123"(classpath:features/CurrencyExchange.feature:10)
+]]></error>
+    <system-out><![CDATA[
+@CurrencyExchange @SuccessfulExchange @Smoke
+Scenario: Successful currency exchange                            &amp#27;[90m# features/CurrencyExchange.feature:15&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                    &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_login_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the login button&amp#27;[0m                                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_login_button()&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI enter email &amp#27;[0m&amp#27;[31m&amp#27;[1m"client@crassula.io"&amp#27;[0m&amp#27;[31m and password &amp#27;[0m&amp#27;[31m&amp#27;[1m"Qwerty123"&amp#27;[0m &amp#27;[90m# steps.CurrencyExchangeSteps.i_enter_email_and_password(java.lang.String,java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [a8b48080-94fa-4d2b-9be5-ca8e84f0d253, clickElement {id=00000000-0000-06f5-ffff-ffff00000069}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (a8b48080-94fa-4d2b-9be5-ca8e84f0d253)] -> id: com.crassula.demo:id/buttonSignIn]
+Session ID: a8b48080-94fa-4d2b-9be5-ca8e84f0d253
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at lib.ui.MainPageObject.waitForElementAndClick(MainPageObject.java:49)
+	at lib.ui.LoginPageObject.clickContinueButton(LoginPageObject.java:96)
+	at lib.ui.LoginPageObject.performLogin(LoginPageObject.java:92)
+	at steps.CurrencyExchangeSteps.i_enter_email_and_password(CurrencyExchangeSteps.java:38)
+	at ✽.I enter email "client@crassula.io" and password "Qwerty123"(classpath:features/CurrencyExchange.feature:10)
+&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI create a passcode&amp#27;[0m                                         &amp#27;[90m# steps.CurrencyExchangeSteps.i_create_a_passcode()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the dashboard&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_dashboard()&amp#27;[0m
+  &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am on the dashboard&amp#27;[0m                                     &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_dashboard()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click the exchange button&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_exchange_button()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the exchange page&amp#27;[0m                             &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_exchange_page()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see exchange rate information&amp#27;[0m                      &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_exchange_rate_information()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see first amount field&amp#27;[0m                             &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_first_amount_field()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see first currency icon&amp#27;[0m                            &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_first_currency_icon()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see first currency button&amp#27;[0m                          &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_first_currency_button()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see first field balance&amp#27;[0m                            &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_first_field_balance()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see max button&amp#27;[0m                                     &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_max_button()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see second amount field&amp#27;[0m                            &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_second_amount_field()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see second currency icon&amp#27;[0m                           &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_second_currency_icon()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see second currency button&amp#27;[0m                         &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_second_currency_button()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see second field balance&amp#27;[0m                           &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_second_field_balance()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see fee information&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_fee_information()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see account to label&amp#27;[0m                               &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_account_to_label()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see account selection field&amp#27;[0m                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_account_selection_field()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see account name&amp#27;[0m                                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_account_name()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see account amount&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_account_amount()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click on account selection&amp#27;[0m                               &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_on_account_selection()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see account selection modal&amp#27;[0m                       &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_account_selection_modal()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI select an account&amp#27;[0m                                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_select_an_account()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see exchange button in form&amp#27;[0m                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_exchange_button_in_form()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see account button&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_account_button()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click max button and clear amount&amp#27;[0m                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_max_button_and_clear_amount()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click first amount field&amp#27;[0m                                  &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_first_amount_field()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI enter amount &amp#27;[0m&amp#27;[36m&amp#27;[1m"1"&amp#27;[0m                                          &amp#27;[90m# steps.CurrencyExchangeSteps.i_enter_amount(java.lang.String)&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see minus symbol in first field&amp#27;[0m                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_minus_symbol_in_first_field()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see plus symbol in second field&amp#27;[0m                    &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_plus_symbol_in_second_field()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click fee info&amp#27;[0m                                           &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_fee_info()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see fee details modal for amount &amp#27;[0m&amp#27;[36m&amp#27;[1m"1"&amp#27;[0m              &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_fee_details_modal_for_amount(java.lang.String)&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI close fee details modal&amp#27;[0m                                  &amp#27;[90m# steps.CurrencyExchangeSteps.i_close_fee_details_modal()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click exchange button in form&amp#27;[0m                             &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_exchange_button_in_form()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see confirm exchange title&amp#27;[0m                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_confirm_exchange_title()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see confirmation details for amount &amp#27;[0m&amp#27;[36m&amp#27;[1m"1"&amp#27;[0m            &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_confirmation_details_for_amount(java.lang.String)&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click confirm exchange&amp#27;[0m                                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_confirm_exchange()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see success title&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_success_title()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see success message&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_success_message()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see exchange amount&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_exchange_amount()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see transaction details title&amp#27;[0m                      &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_transaction_details_title()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click transaction details&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_transaction_details()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see transaction details content&amp#27;[0m                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_transaction_details_content()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click back button&amp#27;[0m                                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_back_button()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click back to home&amp#27;[0m                                        &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_back_to_home()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see transaction on dashboard&amp#27;[0m                      &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_transaction_on_dashboard()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Currency selection validation for Android" classname="Currency Exchange" time="33.22">
+    <error message="Expected condition failed: Exchange button not found&#10; (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
+Expected condition failed: Exchange button not found
+ (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.CurrencyExchangePageObject.verifyExchangeButtonExists(CurrencyExchangePageObject.java:118)
+	at steps.CurrencyExchangeSteps.i_click_the_exchange_button(CurrencyExchangeSteps.java:85)
+	at ✽.I click the exchange button(classpath:features/CurrencyExchange.feature:65)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [d38cbc64-451b-480e-a3c3-342160cd0bd4, findElement {using=id, value=com.crassula.demo:id/buttonExchange}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: d38cbc64-451b-480e-a3c3-342160cd0bd4
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.CurrencyExchangePageObject.verifyExchangeButtonExists(CurrencyExchangePageObject.java:118)
+	at steps.CurrencyExchangeSteps.i_click_the_exchange_button(CurrencyExchangeSteps.java:85)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+    <system-out><![CDATA[
+@CurrencyExchange @CurrencySelection @Android
+Scenario: Currency selection validation for Android               &amp#27;[90m# features/CurrencyExchange.feature:62&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                    &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_login_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the login button&amp#27;[0m                                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter email &amp#27;[0m&amp#27;[32m&amp#27;[1m"client@crassula.io"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"Qwerty123"&amp#27;[0m &amp#27;[90m# steps.CurrencyExchangeSteps.i_enter_email_and_password(java.lang.String,java.lang.String)&amp#27;[0m
+Creating passcode...
+Passcode created, app may have restarted...
+App is still active
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI create a passcode&amp#27;[0m                                         &amp#27;[90m# steps.CurrencyExchangeSteps.i_create_a_passcode()&amp#27;[0m
+Dashboard step - just continuing to next step
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the dashboard&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_dashboard()&amp#27;[0m
+Preparing for currency exchange
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the dashboard&amp#27;[0m                                     &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am using Android platform&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_using_android_platform()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI click the exchange button&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_exchange_button()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.TimeoutException: Expected condition failed: Exchange button not found
+ (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.CurrencyExchangePageObject.verifyExchangeButtonExists(CurrencyExchangePageObject.java:118)
+	at steps.CurrencyExchangeSteps.i_click_the_exchange_button(CurrencyExchangeSteps.java:85)
+	at ✽.I click the exchange button(classpath:features/CurrencyExchange.feature:65)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [d38cbc64-451b-480e-a3c3-342160cd0bd4, findElement {using=id, value=com.crassula.demo:id/buttonExchange}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: d38cbc64-451b-480e-a3c3-342160cd0bd4
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.CurrencyExchangePageObject.verifyExchangeButtonExists(CurrencyExchangePageObject.java:118)
+	at steps.CurrencyExchangeSteps.i_click_the_exchange_button(CurrencyExchangeSteps.java:85)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the exchange page&amp#27;[0m                             &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_exchange_page()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI get first currency button text&amp#27;[0m                           &amp#27;[90m# steps.CurrencyExchangeSteps.i_get_first_currency_button_text()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click first currency button&amp#27;[0m                               &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_first_currency_button()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see currency selection elements&amp#27;[0m                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_currency_selection_elements()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI close currency selection&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_close_currency_selection()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI get second currency button text&amp#27;[0m                           &amp#27;[90m# steps.CurrencyExchangeSteps.i_get_second_currency_button_text()&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click second currency button&amp#27;[0m                              &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_second_currency_button()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see second currency selection elements&amp#27;[0m            &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_second_currency_selection_elements()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI close second currency selection&amp#27;[0m                          &amp#27;[90m# steps.CurrencyExchangeSteps.i_close_second_currency_selection()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mcurrency selection should be completed&amp#27;[0m                     &amp#27;[90m# steps.CurrencyExchangeSteps.currency_selection_should_be_completed()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Insufficient funds validation" classname="Currency Exchange" time="32.178">
+    <error message="An unknown server-side error occurred while processing the command. Original error: &apos;POST /element&apos; cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details&#10;Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;24.0.1&apos;&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Command: [5a92f01d-f04d-420a-a310-69eddc7d64b6, findElement {using=id, value=com.crassula.demo:id/buttonExchange}]&#10;Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}&#10;Session ID: 5a92f01d-f04d-420a-a310-69eddc7d64b6" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [5a92f01d-f04d-420a-a310-69eddc7d64b6, findElement {using=id, value=com.crassula.demo:id/buttonExchange}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 5a92f01d-f04d-420a-a310-69eddc7d64b6
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.CurrencyExchangePageObject.verifyExchangeButtonExists(CurrencyExchangePageObject.java:118)
+	at steps.CurrencyExchangeSteps.i_click_the_exchange_button(CurrencyExchangeSteps.java:85)
+	at ✽.I click the exchange button(classpath:features/CurrencyExchange.feature:80)
+]]></error>
+    <system-out><![CDATA[
+@CurrencyExchange @ValidationError @NegativeTest
+Scenario: Insufficient funds validation                           &amp#27;[90m# features/CurrencyExchange.feature:78&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                    &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_login_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the login button&amp#27;[0m                                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter email &amp#27;[0m&amp#27;[32m&amp#27;[1m"client@crassula.io"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"Qwerty123"&amp#27;[0m &amp#27;[90m# steps.CurrencyExchangeSteps.i_enter_email_and_password(java.lang.String,java.lang.String)&amp#27;[0m
+Creating passcode...
+Passcode created, app may have restarted...
+App is still active
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI create a passcode&amp#27;[0m                                         &amp#27;[90m# steps.CurrencyExchangeSteps.i_create_a_passcode()&amp#27;[0m
+Dashboard step - just continuing to next step
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the dashboard&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_dashboard()&amp#27;[0m
+Preparing for currency exchange
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the dashboard&amp#27;[0m                                     &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_dashboard()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI click the exchange button&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_exchange_button()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [5a92f01d-f04d-420a-a310-69eddc7d64b6, findElement {using=id, value=com.crassula.demo:id/buttonExchange}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 5a92f01d-f04d-420a-a310-69eddc7d64b6
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.CurrencyExchangePageObject.verifyExchangeButtonExists(CurrencyExchangePageObject.java:118)
+	at steps.CurrencyExchangeSteps.i_click_the_exchange_button(CurrencyExchangeSteps.java:85)
+	at ✽.I click the exchange button(classpath:features/CurrencyExchange.feature:80)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the exchange page&amp#27;[0m                             &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_exchange_page()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI try to exchange amount greater than available balance&amp#27;[0m    &amp#27;[90m# steps.CurrencyExchangeSteps.i_try_to_exchange_amount_greater_than_available_balance()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see insufficient funds error&amp#27;[0m                      &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_insufficient_funds_error()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Unavailable currency pair validation" classname="Currency Exchange" time="14.373">
+    <error message="An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up&#10;Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;24.0.1&apos;&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Command: [18e95c5d-a13b-448f-a977-0869c092bbb2, clickElement {id=00000000-0000-0744-ffff-ffff0000007d}]&#10;Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}&#10;Element: [[AndroidDriver:  on ANDROID (18e95c5d-a13b-448f-a977-0869c092bbb2)] -&gt; xpath: //android.widget.Button[@text=&apos;1&apos;]]&#10;Session ID: 18e95c5d-a13b-448f-a977-0869c092bbb2" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [18e95c5d-a13b-448f-a977-0869c092bbb2, clickElement {id=00000000-0000-0744-ffff-ffff0000007d}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (18e95c5d-a13b-448f-a977-0869c092bbb2)] -> xpath: //android.widget.Button[@text='1']]
+Session ID: 18e95c5d-a13b-448f-a977-0869c092bbb2
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at lib.ui.MainPageObject.waitForElementAndClick(MainPageObject.java:49)
+	at lib.ui.LoginPageObject.createPasscode(LoginPageObject.java:113)
+	at steps.CurrencyExchangeSteps.i_create_a_passcode(CurrencyExchangeSteps.java:44)
+	at ✽.I create a passcode(classpath:features/CurrencyExchange.feature:11)
+]]></error>
+    <system-out><![CDATA[
+@CurrencyExchange @ValidationError @NegativeTest
+Scenario: Unavailable currency pair validation                    &amp#27;[90m# features/CurrencyExchange.feature:86&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the login page&amp#27;[0m                                    &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_login_page()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the login button&amp#27;[0m                                   &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter email &amp#27;[0m&amp#27;[32m&amp#27;[1m"client@crassula.io"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"Qwerty123"&amp#27;[0m &amp#27;[90m# steps.CurrencyExchangeSteps.i_enter_email_and_password(java.lang.String,java.lang.String)&amp#27;[0m
+Creating passcode...
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI create a passcode&amp#27;[0m                                         &amp#27;[90m# steps.CurrencyExchangeSteps.i_create_a_passcode()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [18e95c5d-a13b-448f-a977-0869c092bbb2, clickElement {id=00000000-0000-0744-ffff-ffff0000007d}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (18e95c5d-a13b-448f-a977-0869c092bbb2)] -> xpath: //android.widget.Button[@text='1']]
+Session ID: 18e95c5d-a13b-448f-a977-0869c092bbb2
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at lib.ui.MainPageObject.waitForElementAndClick(MainPageObject.java:49)
+	at lib.ui.LoginPageObject.createPasscode(LoginPageObject.java:113)
+	at steps.CurrencyExchangeSteps.i_create_a_passcode(CurrencyExchangeSteps.java:44)
+	at ✽.I create a passcode(classpath:features/CurrencyExchange.feature:11)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the dashboard&amp#27;[0m                                 &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_dashboard()&amp#27;[0m
+  &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am on the dashboard&amp#27;[0m                                     &amp#27;[90m# steps.CurrencyExchangeSteps.i_am_on_the_dashboard()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click the exchange button&amp#27;[0m                                &amp#27;[90m# steps.CurrencyExchangeSteps.i_click_the_exchange_button()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the exchange page&amp#27;[0m                             &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_the_exchange_page()&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI try to select unavailable currency pair&amp#27;[0m                  &amp#27;[90m# steps.CurrencyExchangeSteps.i_try_to_select_unavailable_currency_pair()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see currency pair unavailable error&amp#27;[0m               &amp#27;[90m# steps.CurrencyExchangeSteps.i_should_see_currency_pair_unavailable_error()&amp#27;[0m
+]]></system-out>
+  </testcase>
+</testsuite>

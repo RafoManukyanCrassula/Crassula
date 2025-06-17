@@ -4,7 +4,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import java.net.URL;
 
 public class Platform {
@@ -55,7 +54,6 @@ public class Platform {
         capabilities.setCapability("appPackage", "com.crassula.demo");
         capabilities.setCapability("appActivity", "com.cratech.crassula.ui.v2.main.MainActivity");
         capabilities.setCapability("app", "/Users/rafo/Desktop/crassula.apk");
-        capabilities.setCapability("hideKeyboard", true);
         capabilities.setCapability("autoHideKeyboard", true);
 
         return capabilities;
@@ -68,8 +66,9 @@ public class Platform {
         capabilities.setCapability("platformVersion", "18.3");
         capabilities.setCapability("automationName", "XCUITest");
         capabilities.setCapability("app", "/Users/rafo/Desktop/Crassula.app");
+        capabilities.setCapability("unicodeKeyboard", true);
+        capabilities.setCapability("resetKeyboard", true);
         capabilities.setCapability("autoAcceptAlerts", true);
-        capabilities.setCapability("autoAcceptAlertsDelay", 5000);
 
         return capabilities;
     }

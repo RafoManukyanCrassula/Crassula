@@ -8,13 +8,13 @@ import lib.ui.LoginPageObject;
 import org.junit.jupiter.api.Test;
 
 public class LoginTests extends CoreTestCase {
-    
+
     private static final String VALID_EMAIL = "client@crassula.io";
     private static final String VALID_PASSWORD = "Qwerty123";
     private static final String INVALID_EMAIL = "random@mail.ru";
     private static final String INVALID_PASSWORD = "random";
     private static final String INCOMPLETE_EMAIL = "random";
-    
+
     @Test
     public void testLogin() {
         LoginPageObject loginPage = LoginPageObjectFactory.get(driver);

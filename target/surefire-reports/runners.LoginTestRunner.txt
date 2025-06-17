@@ -1,0 +1,181 @@
+-------------------------------------------------------------------------------
+Test set: runners.LoginTestRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 154.5 s <<< FAILURE! -- in runners.LoginTestRunner
+Currency Exchange.Successful currency exchange -- Time elapsed: 52.91 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Dashboard did not load - Transactions text not found
+ (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.DashboardPageObject.waitForDashboardToLoad(DashboardPageObject.java:16)
+	at steps.CurrencyExchangeSteps.i_should_see_the_dashboard(CurrencyExchangeSteps.java:77)
+	at ✽.I should see the dashboard(classpath:features/CurrencyExchange.feature:12)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [17b9ab83-3c36-4b85-8db4-2f7602e4b35f, findElement {value=//android.widget.TextView[@text='Transactions'], using=xpath}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, hideKeyboard: true, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:hideKeyboard: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 17b9ab83-3c36-4b85-8db4-2f7602e4b35f
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.DashboardPageObject.waitForDashboardToLoad(DashboardPageObject.java:16)
+	at steps.CurrencyExchangeSteps.i_should_see_the_dashboard(CurrencyExchangeSteps.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+Currency Exchange.Currency selection validation for Android -- Time elapsed: 41.72 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Dashboard did not load - Transactions text not found
+ (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.DashboardPageObject.waitForDashboardToLoad(DashboardPageObject.java:16)
+	at steps.CurrencyExchangeSteps.i_should_see_the_dashboard(CurrencyExchangeSteps.java:77)
+	at ✽.I should see the dashboard(classpath:features/CurrencyExchange.feature:12)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [09563b23-c784-47c2-a6ef-df2e53015d71, findElement {value=//android.widget.TextView[@text='Transactions'], using=xpath}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, hideKeyboard: true, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:hideKeyboard: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 09563b23-c784-47c2-a6ef-df2e53015d71
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.DashboardPageObject.waitForDashboardToLoad(DashboardPageObject.java:16)
+	at steps.CurrencyExchangeSteps.i_should_see_the_dashboard(CurrencyExchangeSteps.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+Currency Exchange.Insufficient funds validation -- Time elapsed: 10.67 s <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [76dec745-d698-42a1-9b13-ab8af3b7e4bb, findElement {value=//android.widget.TextView[contains(@text, 'Create a passcode') and contains(@text, 'for your account')], using=xpath}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, hideKeyboard: true, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:hideKeyboard: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 76dec745-d698-42a1-9b13-ab8af3b7e4bb
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:39)
+	at lib.ui.MainPageObject.waitForElementPresent(MainPageObject.java:44)
+	at lib.ui.LoginPageObject.createPasscode(LoginPageObject.java:104)
+	at steps.CurrencyExchangeSteps.i_create_a_passcode(CurrencyExchangeSteps.java:46)
+	at ✽.I create a passcode(classpath:features/CurrencyExchange.feature:11)
+
+Currency Exchange.Unavailable currency pair validation -- Time elapsed: 12.64 s <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '24.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [98ca4e2b-ab1a-4120-a28b-cd78f4d520f7, clickElement {id=00000000-0000-03f8-ffff-ffff0000007d}]
+Capabilities {appium:app: /Users/rafo/Desktop/crassul..., appium:appActivity: com.cratech.crassula.ui.v2...., appium:appPackage: com.crassula.demo, appium:autoHideKeyboard: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/rafo/Desktop/crassul..., appActivity: com.cratech.crassula.ui.v2...., appPackage: com.crassula.demo, autoHideKeyboard: true, automationName: UiAutomator2, deviceName: AndroidTestDevice, hideKeyboard: true, platformName: ANDROID, platformVersion: 12.0}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:hideKeyboard: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 12, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (98ca4e2b-ab1a-4120-a28b-cd78f4d520f7)] -> xpath: //android.widget.Button[@text='1']]
+Session ID: 98ca4e2b-ab1a-4120-a28b-cd78f4d520f7
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at lib.ui.MainPageObject.waitForElementAndClick(MainPageObject.java:49)
+	at lib.ui.LoginPageObject.createPasscode(LoginPageObject.java:107)
+	at steps.CurrencyExchangeSteps.i_create_a_passcode(CurrencyExchangeSteps.java:46)
+	at ✽.I create a passcode(classpath:features/CurrencyExchange.feature:11)
+

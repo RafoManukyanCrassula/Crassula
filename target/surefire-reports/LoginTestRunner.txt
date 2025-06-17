@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: LoginTestRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 0.198 s <<< FAILURE! - in LoginTestRunner
+Successful currency exchange  Time elapsed: 0.042 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Currency selection validation for Android  Time elapsed: 0.011 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Insufficient funds validation  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Unavailable currency pair validation  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Successful login  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Validation for blank email and password  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Validation for invalid email  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
+Invalid credentials alert  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.Exception: Cannot detect type of the Driver. Platform value: null
+
