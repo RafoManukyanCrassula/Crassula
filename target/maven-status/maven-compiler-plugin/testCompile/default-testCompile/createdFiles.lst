@@ -13,12 +13,11 @@ lib/ui/iOS/iOSDashboardPageObject.class
 lib/ui/iOS/iOSLoginPageObject.class
 lib/ui/CurrencyExchangePageObject.class
 lib/ui/factories/TransactionDetailsPageObjectFactory.class
-steps/CurrencyExchangeSteps.class
+lib/ui/utils/BalanceUtils.class
 lib/ui/iOS/iOSCurrencyExchangePageObject.class
 lib/ui/factories/DashboardPageObjectFactory.class
 lib/ui/Android/AndroidCurrencyExchangePageObject.class
 lib/ui/Android/AndroidDashboardPageObject.class
-runners/CurrencyExchangeTestRunner.class
 lib/ui/DashboardPageObject.class
 lib/ui/LoginPageObject.class
 lib/ui/ValidationHelperObject.class

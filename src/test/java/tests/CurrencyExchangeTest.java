@@ -10,6 +10,7 @@ import lib.ui.factories.LoginPageObjectFactory;
 import lib.ui.CurrencyExchangePageObject;
 import lib.ui.TransactionDetailsPageObject;
 import org.junit.jupiter.api.Test;
+import lib.ui.utils.BalanceUtils;
 
 public class CurrencyExchangeTest extends CoreTestCase {
     
@@ -139,27 +140,10 @@ public class CurrencyExchangeTest extends CoreTestCase {
         CurrencyExchangePageObject exchangePage = CurrencyExchangePageObjectFactory.get(driver);
         exchangePage.clickExchangeButton();
 
-        double greaterAmount = getGreaterAmount(exchangePage);
+        double greaterAmount = BalanceUtils.calculateGreaterAmount(exchangePage.getBalanceAmount());
         exchangePage.validateInsufficientFundsError(greaterAmount);
 
         System.out.println("Validation for insufficient funds passed.");
-    }
-
-    private static double getGreaterAmount(CurrencyExchangePageObject exchangePage) {
-        String balanceText = exchangePage.getBalanceAmount();
-        String numericBalanceText = balanceText
-                .replace("Balance:", "")
-                .replace("GBP", "")
-                .trim();
-
-        double currentBalance;
-        try {
-            currentBalance = Double.parseDouble(numericBalanceText);
-        } catch (NumberFormatException e) {
-            throw new RuntimeException("Failed to parse balance: " + balanceText, e);
-        }
-
-        return currentBalance + 10.0;
     }
 
     @Test

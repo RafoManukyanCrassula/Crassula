@@ -21,6 +21,7 @@
 /Users/rafo/IdeaProjects/Crassula/src/test/java/lib/ui/iOS/iOSLoginPageObject.java
 /Users/rafo/IdeaProjects/Crassula/src/test/java/lib/ui/iOS/iOSTransactionDetailsPageObject.java
 /Users/rafo/IdeaProjects/Crassula/src/test/java/lib/ui/iOS/iOSValidationHelperObject.java
+/Users/rafo/IdeaProjects/Crassula/src/test/java/lib/ui/utils/BalanceUtils.java
 /Users/rafo/IdeaProjects/Crassula/src/test/java/runners/CurrencyExchangeTestRunner.java
 /Users/rafo/IdeaProjects/Crassula/src/test/java/runners/LoginTestRunner.java
 /Users/rafo/IdeaProjects/Crassula/src/test/java/steps/CurrencyExchangeSteps.java
